@@ -19,7 +19,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
