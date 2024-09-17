@@ -1,1 +1,6 @@
-@import 'bootstrap';
+
+@import'bootstrap';
+/*tutto bootstrap*/
+@import'./style.css';
+
+@import'./template.css';
