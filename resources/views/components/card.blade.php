@@ -1,15 +1,18 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
+<div class="card">
+    <img src="..." alt="...">
+    <div>
       <h5 class="card-title">Titolo</h5>
       <p class="card-text">
         descrizione
+        <button>Scopri di più</button>
       </p>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Prezzo: 60€</li>
+    <ul class="">
+      <li class="">Prezzo: 60€
+      </li>
     </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">link</a>
+    <li>
+      <a href="#" >link</a>
+    </li>
     </div>
 </div>
