@@ -15,4 +15,7 @@
   <li>
     <a href="#" >link</a>
   </li>
+  <li>
+    <p>Annuncio di: {{$article->user->name}}</p>
+  </li>
 </div>
