@@ -29,7 +29,7 @@
 
                 <div class="form-check text-start my-3">
                     <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-                    <label class="form-check-label text-white" for="flexCheckDefault">Remember me</label>
+                    <label class="form-check-label text-black" for="flexCheckDefault">Remember me</label>
                 </div>
 
                 <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
