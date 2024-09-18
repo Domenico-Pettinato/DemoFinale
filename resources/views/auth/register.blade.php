@@ -1,25 +1,26 @@
 <x-layout>
-    <!-- validazione della registrazione -->
-    <div class="col-12  mt-3 d-flex justify-content-center">
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-        <form method="POST" action="{{route('register')}}" class="form">
-            @csrf
-            <div class="container">
-                <h1 class="h3 mb-3 fw-normal text-black">Form di Registrazione</h1>
-                <p class="mt-2 mb-4 text-black">Inserisci i tuoi dati per creare un account.</p>
 
-                <div class="form-floating mb-3 ">
-                    <input type="text" name="name" class="form-control" id="Name" placeholder="Enter Full Name" required>
-                    <label for="name">Name</label>
-                </div>
+<!-- validazione della registrazione -->
+<div class="col-12  mt-3 d-flex justify-content-center">
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+<form method="POST" action="{{route('register')}}" class="form">
+                    @csrf
+                    <div class="container">
+                        <h1 class="h3 mb-3 fw-normal text-black">Form di Registrazione</h1>
+                        <p  class="mt-2 mb-4 text-black">Inserisci i tuoi dati per creare un account.</p>
+
+                        <div class="form-floating mb-3 ">
+                            <input type="text"  name="name" class="form-control" id="Name" placeholder="Enter Full Name" required>
+                            <label for="name">Name</label>
+                        </div>
 
                 <div class="form-floating mb-3">
                     <input type="text" placeholder="Enter Email" name="email" class="form-control" id="email" required>

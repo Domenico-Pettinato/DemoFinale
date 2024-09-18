@@ -21,7 +21,7 @@ class CreateArticle extends Component
             'price'=>$this->price,
             'description'=>$this->description,
             'category_id'=>$this->category_id,
-            // 'user_id'=>Auth::user()->id()
+            'user_id'=>Auth::user()->id
         ]);
     }
 
