@@ -23,6 +23,8 @@ class CreateArticle extends Component
             'category_id'=>$this->category_id,
             'user_id'=>Auth::user()->id
         ]);
+        session()->flash('success', 'Articolo creato con successo!');
+        $this->reset();
     }
 
     public function render()
