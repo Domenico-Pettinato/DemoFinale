@@ -1,4 +1,9 @@
 <div class="container">
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{session('success')}}
+        </div>
+    @endif
         <form wire:submit="store">
             <div class="mb-3">
                 <label for="createArticleTitle" class="form-label">Titolo</label>
