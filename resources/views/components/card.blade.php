@@ -12,4 +12,4 @@
     <div class="card-body">
       <a href="#" class="card-link">link</a>
     </div>
-  </div>
+</div>

@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +22,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // in questo modo abbiamo in ogni vista l'oggetto categoria
+        if(Schema::hasTable('categories')){
+            $categories = Category::all();
+            View::share('categories', $categories);
+        }
     }
 }
