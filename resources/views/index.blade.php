@@ -1,9 +1,6 @@
 <x-layout>
-   <!-- qui dobbiamo inserire il codice della navbar-->
-
-
-    <div class =>
-        <x-card :oceangames="$titolo ='titolo'"/>    <!--separazione competenze -->
-
+    <div>
+        <p>Qua ci sarà la generazione delle card, come da esempio</p>
+        <x-card/>    <!--separazione competenze -->
     </div>
 </x-layout>
