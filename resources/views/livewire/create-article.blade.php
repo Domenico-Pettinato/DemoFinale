@@ -23,6 +23,6 @@
                 <label for="createArticleDescription" class="form-label">Descrizione</label>
                 <textarea class="form-control" id="createArticleDescription" rows="3" wire:model="description"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Carica annuncio</button>
         </form>
 </div>
