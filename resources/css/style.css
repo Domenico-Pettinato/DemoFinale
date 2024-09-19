@@ -1,56 +1,115 @@
-body {
-    /* font-family: Arial, sans-serif;
+/* colors */
+:root{
+    --background1: #e6e6e6;
+    --fontColor1: #1a1a1a;
+    --primaryColor1: #4a90e2;
+    --primaryColor2: #a3d5ff;
+    --primaryColor3: #abffcb;
+    --secondaryColor1: #dee2e6;
+    --secondaryColor2: #797979;
+    --secondaryColor3: #383838;
+    --contrastColor1: #ffc72d;
+}
+
+/* card */
+.cardWrapper{
+    /* display */
+    display: flex;
+    flex-direction: column;
+
+    /* color */
+    background: linear-gradient(var(--primaryColor2), var(--secondaryColor1), var(--secondaryColor1));
+    color: var(--fontColor1);
+
+    /* box model */
+    padding-bottom: 8px;
+    margin: 16px;
+    border: 2px solid var(--secondaryColor1);
+    border-radius: 8px;
+}
+.cardImageCustom{
+    /* size */
+    max-width: 100%;
+
+    /* box model */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.cardTextCustom{
+    /* box model */
+    margin-top: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.cardDescriptionCustom{
+    /* tramite questa classe css il testo della descrizione viene croppato ad una riga */
+        display: -webkit-box;
+        line-clamp: 1;        
+        -webkit-line-clamp: 1;       
+        -webkit-box-orient: vertical;
+        overflow: hidden;            
+        text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; */
-    background-color: #f4f4f4;
-    /* margin: 0px; */
-}
+    height: 100vh; 
+    background-color: #f4f4f4; 
+    margin: 0px;
+} */
 
-.card {
+/* .card {
     border: 1px solid #ccc;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #ffffff; /* Bianco */
+    background-color: #ffffff;
     max-width: 300px;
-}
+} */
 
-.card img {
+/* .card img {
     max-width: 100%;
     border-radius: 8px 8px 0 0;
-}
+} */
 
-.card h2 {
+/* .card h2 {
     font-size: 1.5em;
     margin: 16px 0;
-    color: #4a90e2; /* Blu pastello */
-}
+    color: #4a90e2;
+} */
 
 
-.card-title {
+/* .card-title {
     font-size: 1em;
-    color: #666;
-}
+    color: #797979;
+} */
 
-.card button {
-    background-color: #a3d5ff; /* Azzurro pastello */
+/* .card button {
+    background-color: #a3d5ff;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-}
+} */
 
-.card button:hover {
-    background-color: #4a90e2; /* Blu pastello */
-}
+/* .card button:hover {
+    background-color: #4a90e2; 
+} */
 
-.card ul li {
-    background-color: #e0f7fa; /* Verde chiaro pastello */
+/* .card ul li {
+    background-color: #abffcb; 
     margin: 8px 0;
     padding: 8px;
     border-radius: 4px;
-}  
+}   */
