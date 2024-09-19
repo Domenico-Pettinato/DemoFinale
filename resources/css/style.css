@@ -43,12 +43,12 @@
 }
 .cardDescriptionCustom{
     /* tramite questa classe css il testo della descrizione viene croppato ad una riga */
-        display: -webkit-box;
-        line-clamp: 1;        
-        -webkit-line-clamp: 1;       
-        -webkit-box-orient: vertical;
-        overflow: hidden;            
-        text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 1;        
+    -webkit-line-clamp: 1;       
+    -webkit-box-orient: vertical;
+    overflow: hidden;            
+    text-overflow: ellipsis;
 }
 
 /* body {

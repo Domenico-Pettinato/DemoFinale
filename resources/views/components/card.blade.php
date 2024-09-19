@@ -5,6 +5,7 @@
       <h5 class="cardTextCustom">{{$article->category->name}}</h5>
       <h4 class="cardTextCustom">€{{$article->price}}</h4>
       <p class="cardTextCustom cardDescriptionCustom">{{$article->description}}</p>
+      <p class="cardTextCustom">Articolo di {{$article->user->name}}</p>
       <button>Call to Action</button>
   </div>
 </div>
