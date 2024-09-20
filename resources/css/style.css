@@ -10,6 +10,11 @@
     --secondaryColor3: #383838;
     --contrastColor1: #ffc72d;
 }
+/* logo */
+.logo {
+    border-radius: 10px;
+    max-width: 4%;
+}
 
 /* card */
 .cardWrapper{
