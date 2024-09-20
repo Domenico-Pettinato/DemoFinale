@@ -10,6 +10,11 @@
     --secondaryColor3: #383838;
     --contrastColor1: #ffc72d;
 }
+/* logo */
+.logo {
+    border-radius: 10px;
+    max-width: 4%;
+}
 
 /* card */
 .cardWrapper{
@@ -50,60 +55,16 @@
     overflow: hidden;            
     text-overflow: ellipsis;
 }
+.btnShowCustom{
+    margin-left: 8px;
+}
 
-/* body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    background-color: #f4f4f4; 
-    margin: 0px;
-} */
-
-/* .card {
-    border: 1px solid #ccc;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background-color: #ffffff;
-    max-width: 300px;
-} */
-
-/* .card img {
-    max-width: 100%;
-    border-radius: 8px 8px 0 0;
-} */
-
-/* .card h2 {
-    font-size: 1.5em;
-    margin: 16px 0;
-    color: #4a90e2;
-} */
-
-
-/* .card-title {
-    font-size: 1em;
-    color: #797979;
-} */
-
-/* .card button {
-    background-color: #a3d5ff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-} */
-
-/* .card button:hover {
-    background-color: #4a90e2; 
-} */
-
-/* .card ul li {
-    background-color: #abffcb; 
-    margin: 8px 0;
-    padding: 8px;
-    border-radius: 4px;
-}   */
+/* show view */
+.showElementCustom{
+    margin-left: 12vw !important;
+}
+/* carousel */
+.carouselImgCustom{
+    /* size */
+    height: 60vh; 
+}

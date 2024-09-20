@@ -15,7 +15,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('price', 'asc')->get();
         return view('index', compact('articles'));
     }
 
@@ -38,9 +38,9 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Article $article)
     {
-        //
+        return view('articles.show', compact('article'));
     }
 
     /**
