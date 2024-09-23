@@ -76,6 +76,6 @@ class ArticleController extends Controller
         $articles = $category->article; // Assumendo che tu abbia la relazione 'articles' nel modello Category
 
         // Ritorna una vista che mostra gli articoli filtrati
-        return view('articles.store', compact('articles', 'category'));
+        return view('articles.categories', compact('articles', 'category'));
     }
 }
