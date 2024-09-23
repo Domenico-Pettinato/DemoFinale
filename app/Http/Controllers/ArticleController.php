@@ -15,7 +15,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('price', 'asc')->get();
+        // ordina dal più recente massimo 6 articoli
+        $articles = Article::orderBy('created_at', 'desc')->take(6)->get();
         return view('index', compact('articles'));
     }
 
@@ -66,4 +67,6 @@ class ArticleController extends Controller
     {
         //
     }
+
+    
 }

@@ -9,8 +9,13 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Homepage</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Link</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Elenco Categorie</a>
+                    <ul class="dropdown-menu">
+                        @foreach ($categories as $category)
+                        <li><a class="dropdown-item" href="{{ route('articles.filterByCategory', ['category' => $category->id]) }}">{{ $category->name }}</a></li>
+                        @endforeach
+                    </ul>
                 </li>
                 @auth
                 {{-- auth --}}
@@ -20,25 +25,28 @@
                             {{Auth::user()->name}}
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('articles.create')}}">Crea articolo</a></li>
-                        <li class="dropdown-item">
-                            <form action="{{route('logout')}}" method="POST">
-                                @csrf
-                                <button type="submit" class="btn btn-outline-danger">Logout</button>
-                            </form>
-                        </li>
+                            @if (Auth::user()->is_revisor)
+                                <li><a class="dropdown-item" href="{{route('revisor.index')}}">Area riservata</a></li>
+                            @endif
+                            <li><a class="dropdown-item" href="{{route('articles.create')}}">Crea articolo</a></li>
+                            <li class="dropdown-item">
+                                <form action="{{route('logout')}}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="btn btn-outline-danger">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </li>
                 @else
-                {{-- guest --}}
+                    {{-- guest --}}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person"></i>
                             Utente
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
-                        <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+                            <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+                            <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
                         </ul>
                     </li>
                 @endauth

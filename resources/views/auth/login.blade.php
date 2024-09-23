@@ -1,7 +1,6 @@
 <x-layout>
-
     <!-- validazione del login -->
-    <div class="col-12  mt-3 d-flex justify-content-center">
+    <div class="col-12  mt-3 d-flex justify-content-center vh-100">
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -33,7 +32,7 @@
                 </div>
 
                 <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-                <p class="mt-3 mb-3 text-black">© 2024 by Rebels</p>
+                <p class="mt-3 mb-3 text-black"></p>
             </div>
         </form>
     </div>

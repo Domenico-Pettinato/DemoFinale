@@ -1,7 +1,6 @@
 <x-layout>
-
 <!-- validazione della registrazione -->
-<div class="col-12  mt-3 d-flex justify-content-center">
+<div class="col-12 mt-3 d-flex justify-content-center vh-100">
 @if ($errors->any())
 <div class="alert alert-danger">
     <ul>
@@ -40,7 +39,7 @@
                 <div class="form-floating mb-3">
                     <p class="mt-3 mb-3 text-white">By creating an account you agree to our <a href="#" class="text-white">Terms & Privacy</a></p>
                     <button type="submit" class="btn btn-primary w-100 py-2">Register</button>
-                    <p class="mt-3 mb-3 text-black">© 2024 by Rebels</p>
+                    <p class="mt-3 mb-3 text-black"></p>
                 </div>
             </div>
         </form>

@@ -201,7 +201,7 @@ return [
 
     'tntsearch' => [
         'storage' => storage_path(),
-        'fuzziness' => env('TNTSEARCH_FUZZINESS',false),
+        'fuzziness' => env('TNTSEARCH_FUZZINESS',false), // Se vogliamo consentire degli errori di battitura modificare in 'true'
         'fuzzy' => [
             'prefix_length' => 2,
             'max_expansions' =>50,
