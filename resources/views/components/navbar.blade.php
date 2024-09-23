@@ -37,6 +37,24 @@
                             </li>
                         </ul>
                     </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person"></i>
+                        {{Auth::user()->name}}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('articles.create')}}">Crea articolo</a></li>
+                        <li class="dropdown-item">
+                            <form action="{{ route('workwithus') }}" method="GET">
+                                <button type="submit" class="btn btn-outline-danger">Lavora con noi</button>
+                            </form>
+                            <form action="{{route('logout')}}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-outline-danger">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
                 @else
                     {{-- guest --}}
                     <li class="nav-item dropdown">
