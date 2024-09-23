@@ -15,10 +15,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        // ordina dal più recente
-        $articles = Article::orderBy('created_at', 'desc')->get();
-    //    mostra 6 articoli
-        $articles = Article::latest()->take(6)->get();
+        // ordina dal più recente massimo 6 articoli
+        $articles = Article::orderBy('created_at', 'desc')->take(6)->get();
         return view('index', compact('articles'));
     }
 
