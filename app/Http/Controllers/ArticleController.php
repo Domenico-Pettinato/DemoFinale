@@ -15,7 +15,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('price', 'asc')->get();
+        $articles = Article::orderBy('created_at', 'desc')->get();
         return view('index', compact('articles'));
     }
 
@@ -65,5 +65,17 @@ class ArticleController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function filterByCategory($categoryId)
+    {
+        // Recupera la categoria selezionata
+        $category = Category::findOrFail($categoryId);
+
+        // Recupera tutti gli articoli che appartengono a quella categoria
+        $articles = $category->article; // Assumendo che tu abbia la relazione 'articles' nel modello Category
+
+        // Ritorna una vista che mostra gli articoli filtrati
+        return view('articles.store', compact('articles', 'category'));
     }
 }
