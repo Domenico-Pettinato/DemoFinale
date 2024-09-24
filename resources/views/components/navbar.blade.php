@@ -43,6 +43,9 @@
                         {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
+                    @if (Auth::user()->is_revisor)
+                                <li><a class="dropdown-item" href="{{route('revisor.index')}}">Area riservata</a></li>
+                            @endif
                         <li><a class="dropdown-item" href="{{route('articles.create')}}">Crea articolo</a></li>
                         <li class="dropdown-item">
                             <form action="{{ route('workwithus') }}" method="GET">

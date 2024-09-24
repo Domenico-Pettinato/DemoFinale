@@ -27,5 +27,4 @@ class Article extends Model
 	‘category’=>$this->category
 ];
 }
-
-
+}
