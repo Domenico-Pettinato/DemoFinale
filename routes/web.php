@@ -14,11 +14,8 @@ Route::get('/', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/articles/category/{category}', [PageController::class, 'filterByCategory'])->name('articles.filterByCategory');
 Route::get('/articles/category/{category}', [ArticleController::class, 'filterByCategory'])->name('articles.filterByCategory');
 
-<<<<<<< HEAD
 // route lavora con noi //
-=======
 // routes work with us
->>>>>>> 50e50971a4e9608407c36418f58bb0771deb4242
 Route::get('/workwithus', [WorkWithUsController::class, 'workwithus'])->name('workwithus');
 Route::post('/workwithus', [WorkWithUsController::class, 'submitApplication'])->name('submit_application');
 
