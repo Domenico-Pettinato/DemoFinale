@@ -8,6 +8,7 @@ use Illuminate\Container\Attributes\Auth as AttributesAuth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class ArticleController extends Controller
 {
     /**
