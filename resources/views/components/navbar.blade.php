@@ -55,9 +55,7 @@
             </ul>
             {{-- due barre di ricerca, solo una necessaria --}}
             {{-- se si utilizza la barra di ricerca dice che articles.index does not exist --}}
-            <form role="search">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-            </form>
+        
             <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
                 <div class="input-group">
                     <input type="search" name="query" class="form-control" placeholder="Search" aria - label="search">
