@@ -10,15 +10,22 @@ use Illuminate\Support\Facades\Route;
 Route::resource('articles', ArticleController::class)->except('index');
 Route::get('/', [ArticleController::class, 'index'])->name('article.index');
 
+// routes categories filter
 Route::get('/articles/category/{category}', [PageController::class, 'filterByCategory'])->name('articles.filterByCategory');
 Route::get('/articles/category/{category}', [ArticleController::class, 'filterByCategory'])->name('articles.filterByCategory');
 
+<<<<<<< HEAD
 // route lavora con noi //
+=======
+// routes work with us
+>>>>>>> 50e50971a4e9608407c36418f58bb0771deb4242
 Route::get('/workwithus', [WorkWithUsController::class, 'workwithus'])->name('workwithus');
 Route::post('/workwithus', [WorkWithUsController::class, 'submitApplication'])->name('submit_application');
 
 // route reserved area
 Route::get('/reserved/index', [RevisorController::class, 'index'])->name('revisor.index');
+Route::patch('accept/{article}', [RevisorController::class, 'accept'])->name('accept');
+Route::patch('reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 
 //rotta per effettuare la ricerca 
 Route::get('/search/article', [PageController::class, 'searchArticles']) ->name('article.search');
