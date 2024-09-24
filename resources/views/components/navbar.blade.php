@@ -18,34 +18,15 @@
                     </ul>
                 </li>
                 @auth
-                {{-- auth --}}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person"></i>
-                            {{Auth::user()->name}}
-                        </a>
-                        <ul class="dropdown-menu">
-                            @if (Auth::user()->is_revisor)
-                                <li><a class="dropdown-item" href="{{route('revisor.index')}}">Area riservata</a></li>
-                            @endif
-                            <li><a class="dropdown-item" href="{{route('articles.create')}}">Crea articolo</a></li>
-                            <li class="dropdown-item">
-                                <form action="{{route('logout')}}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn btn-outline-danger">Logout</button>
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person"></i>
                         {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
-                    @if (Auth::user()->is_revisor)
-                                <li><a class="dropdown-item" href="{{route('revisor.index')}}">Area riservata</a></li>
-                            @endif
+                        @if (Auth::user()->is_revisor)
+                        <li><a class="dropdown-item" href="{{route('revisor.index')}}">Area riservata</a></li>
+                        @endif
                         <li><a class="dropdown-item" href="{{route('articles.create')}}">Crea articolo</a></li>
                         <li class="dropdown-item">
                             <form action="{{ route('workwithus') }}" method="GET">
@@ -59,17 +40,17 @@
                     </ul>
                 </li>
                 @else
-                    {{-- guest --}}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person"></i>
-                            Utente
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
-                            <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
-                        </ul>
-                    </li>
+                {{-- guest --}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person"></i>
+                        Utente
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+                        <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+                    </ul>
+                </li>
                 @endauth
             </ul>
             {{-- <form role="search">
@@ -77,13 +58,13 @@
             </form> --}}
             <form class="d-flex ms-auto" role="search" action="" method="GET">
                 <div class="input-group">
-                  <input type="search" name="query" class="form-control" placeholder="Search" aria - label="search">
-                  <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
-                    Search
-                  </button>
+                    <input type="search" name="query" class="form-control" placeholder="Search" aria - label="search">
+                    <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
+                        Search
+                    </button>
                 </div>
-              </form>
-              
+            </form>
+
         </div>
     </div>
 </nav>
