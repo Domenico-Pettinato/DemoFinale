@@ -19,12 +19,14 @@ class Article extends Model
     }
 
     public function toSearchableArray() 
+    { 
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'category' => $this->category
+        ];
+    }
+}    
 
-{ return [
-	‘id’ =>$this->id,
-	‘title’ =>this->title,
-	‘description’ =>$this->description,
-	‘category’=>$this->category
-];
-}
-}
+

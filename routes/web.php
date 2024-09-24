@@ -17,3 +17,6 @@ Route::post('/workwithus', [WorkWithUsController::class, 'workwithus'])->name('s
 
 // route reserved area
 Route::get('/reserved/index', [RevisorController::class, 'index'])->name('revisor.index');
+
+//rotta per effettuare la ricerca 
+Route::get('/search/article', [PublicController::class, 'searchArticles']) ->name('article.search');
