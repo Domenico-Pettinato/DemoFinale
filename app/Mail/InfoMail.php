@@ -24,7 +24,7 @@ class InfoMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Info Mail',
+            subject: 'Info Mail Candidatura',
         );
     }
 
