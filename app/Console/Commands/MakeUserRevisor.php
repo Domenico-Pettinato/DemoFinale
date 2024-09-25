@@ -12,6 +12,7 @@ class MakeUserRevisor extends Command
      *
      * @var string
      */
+    // comado per validare un controllore //
     protected $signature = 'app:make-user-revisor {email}';
 
     /**
