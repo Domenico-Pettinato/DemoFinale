@@ -17,7 +17,7 @@ Route::get('/articles/category/{category}', [PageController::class, 'filterByCat
 // route lavora con noi //
 // routes work with us
 Route::get('/workwithus', [WorkWithUsController::class, 'workwithus'])->name('workwithus');
-Route::post('/workwithus', [WorkWithUsController::class, 'submitApplication'])->name('submit_application');
+Route::post('/workwithus', [WorkWithUsController::class, 'submitapplication'])->name('submit_application');
 
 // route reserved area
 Route::get('/reserved/index', [RevisorController::class, 'index'])->name('revisor.index');
