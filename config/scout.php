@@ -201,12 +201,12 @@ return [
 
     'tntsearch' => [
         'storage' => storage_path(),
-        'fuzziness' => env('TNTSEARCH_FUZZINESS',false), // Se vogliamo consentire degli errori di battitura modificare in 'true'
+        'fuzziness' => env('TNTSEARCH_FUZZINESS',true), // Se vogliamo consentire degli errori di battitura modificare in 'true'
         'fuzzy' => [
             'prefix_length' => 2,
             'max_expansions' =>50,
             'distance' => 2,
-            'no_limit' => true
+            
         ],
         'asYouType' => false,
         'searchBoolean' => env('TNTSEARCH_BOOLEAN',false),

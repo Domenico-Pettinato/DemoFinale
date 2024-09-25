@@ -33,7 +33,7 @@ class PageController extends Controller
                     ->paginate(10);
         
         // Ritorna la vista 'article.searched' con gli articoli trovati e la query
-        return view('article.searched', [
+        return view('articles.searched', [
             'articles' => $articles,
             'query' => $query,
         ]);

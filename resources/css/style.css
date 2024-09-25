@@ -78,3 +78,17 @@ html, body {
 .btnRevisorCustom{
     width: 100px;
 }
+/* revisor index */
+.pageWrapper{
+    height: 80vh;
+}
+/* revisor carousel */
+.carousel-inner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.carousel {
+    max-width: 600px;
+    margin: 0 auto;
+}
