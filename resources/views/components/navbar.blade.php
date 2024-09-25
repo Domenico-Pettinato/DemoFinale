@@ -53,8 +53,8 @@
                 </li>
                 @endauth
             </ul>
-            {{-- due barre di ricerca, solo una necessaria --}}
-            {{-- se si utilizza la barra di ricerca dice che articles.index does not exist --}}
+            
+
         
             <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
                 <div class="input-group">
