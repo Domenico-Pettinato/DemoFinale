@@ -33,5 +33,3 @@ class Article extends Model
         $this->save();
     }
 }    
-
-

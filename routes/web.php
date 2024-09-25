@@ -12,7 +12,7 @@ Route::get('/', [ArticleController::class, 'index'])->name('article.index');
 
 // routes categories filter
 Route::get('/articles/category/{category}', [PageController::class, 'filterByCategory'])->name('articles.filterByCategory');
-Route::get('/articles/category/{category}', [ArticleController::class, 'filterByCategory'])->name('articles.filterByCategory');
+Route::get('/articles/category/{category}', [PageController::class, 'filterByCategory'])->name('articles.filterByCategory');
 
 // routes work with us
 Route::get('/workwithus', [WorkWithUsController::class, 'workwithus'])->name('workwithus');

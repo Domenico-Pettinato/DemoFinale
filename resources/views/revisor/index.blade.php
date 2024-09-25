@@ -1,6 +1,6 @@
 <x-layout>
     <h1 class="text-center">Benvenuto nella tua area riservata</h1>
-    <div class="container">
+    <div class="container h-100">
         @if (session()->has('revMessage'))
             <div class="alert alert-secondary">
                 {{session('revMessage')}}
@@ -23,7 +23,7 @@
                 </div>
             @else
                 <div class="col-12">
-                    <h2 class="text-center">Nessun articolo da revisionare</h2>
+                    <h2 class="text-center">Non hai nessun articolo da revisionare</h2>
                 </div>
             @endif
         </div>
