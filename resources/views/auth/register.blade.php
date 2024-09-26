@@ -10,7 +10,7 @@
             </ul>
         </div>
         @endif
-        <form method="POST" action="{{route('register')}}" class="form">
+        <form action="{{route('register')}}"method="POST" class="form">
             @csrf
             <div class="container">
                 <h1 class="h3 mb-3 fw-normal text-black">Form di Registrazione</h1>

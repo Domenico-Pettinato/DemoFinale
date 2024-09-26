@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use Faker\Provider\ar_EG\Address;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -10,10 +9,13 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class InfoMail extends Mailable
+class RegisterMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    /**
+     * Create a new message instance.
+     */
     public $contact;
 
     public function __construct($contact)
@@ -21,10 +23,13 @@ class InfoMail extends Mailable
         $this->contact = $contact;
     }
 
+    /**
+     * Get the message envelope.
+     */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Info Mail Candidatura',
+            subject: 'Register Mail',
         );
     }
 
@@ -34,7 +39,7 @@ class InfoMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail\email',
+            view: 'mail\newuser',
         );
     }
 
@@ -47,10 +52,10 @@ class InfoMail extends Mailable
     {
         return [];
     }
-
+    
     // public function build() 
     // {
-    //     return $this->view('email');
+    //     return $this->view('newuser');
         
     // }
 }

@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\InfoMail;
+use App\Mail\RegisterMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class WorkWithUsController extends Controller
+class RegisterController extends Controller
 {
-    public function workwithus()
+    public function register()
     {
 
-        return view('workwithus');
+        return view('auth\register');
     }
 
     public function submitapplication(Request $request)
@@ -22,7 +22,6 @@ class WorkWithUsController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
-            'cv' => 'required|file|mimes:pdf,doc,docx|max:2048', // validazione del CV
         ]);
 
 
@@ -34,9 +33,10 @@ class WorkWithUsController extends Controller
 
         // Invia l'email
         $contact = $request->all();
-        Mail::to( $contact['email'])->send(new InfoMail($contact));
+        Mail::to( $contact['email'])->send(new RegisterMail($contact));
        
-        session()->flash('success', 'Candidatura inviata con successo!');
-        return redirect()->route('workwithus');
+        session()->flash('success', 'Registrazione avvenuta con successo!');
+        return redirect()->route('login');
     }
 }
+ 

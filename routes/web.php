@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\WorkWithUsController;
 use Illuminate\Support\Facades\Route;
@@ -14,10 +15,11 @@ Route::get('/', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/articles/category/{category}', [PageController::class, 'filterByCategory'])->name('articles.filterByCategory');
 Route::get('/articles/category/{category}', [PageController::class, 'filterByCategory'])->name('articles.filterByCategory');
 
-// route lavora con noi //
-// routes work with us
+
+// routes work with us + mailtrap
 Route::get('/workwithus', [WorkWithUsController::class, 'workwithus'])->name('workwithus');
 Route::post('/workwithus', [WorkWithUsController::class, 'submitapplication'])->name('submit_application');
+Route::post('/register', [RegisterController::class, 'submitapplication'])->name('register');
 
 // route reserved area
 Route::get('/reserved/index', [RevisorController::class, 'index'])->name('revisor.index');
