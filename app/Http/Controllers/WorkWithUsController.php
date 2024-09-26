@@ -7,13 +7,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class WorkWithUsController extends Controller
-{
+{ 
+    // Funzione per richiama la vista blade //
     public function workwithus()
     {
 
         return view('workwithus');
     }
 
+    // Funzione per eseguire il submit //
     public function submitapplication(Request $request)
     {
 
@@ -35,7 +37,8 @@ class WorkWithUsController extends Controller
         // Invia l'email
         $contact = $request->all();
         Mail::to( $contact['email'])->send(new InfoMail($contact));
-       
+        
+       // Messaggio di conferma //
         session()->flash('success', 'Candidatura inviata con successo!');
         return redirect()->route('workwithus');
     }

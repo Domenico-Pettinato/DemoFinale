@@ -52,10 +52,4 @@ class RegisterMail extends Mailable
     {
         return [];
     }
-    
-    // public function build() 
-    // {
-    //     return $this->view('newuser');
-        
-    // }
 }

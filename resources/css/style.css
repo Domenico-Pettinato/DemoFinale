@@ -17,8 +17,11 @@ html, body {
 }
 /* logo */
 .logo {
-    border-radius: 10px;
-    max-width: 4%;
+    border-radius: 50px;
+}
+
+.biglogo {
+    border-radius: 50px;
 }
 
 /* card */

@@ -1,16 +1,16 @@
-<div class="container">
+<div class="container vh-100">
     <div class="row mt-5">
         <div class="col-md-7">
             <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://via.placeholder.com/700x300" class="d-block w-100" alt="Immagine 1">
+                        <img src="https://picsum.photos/{{399+$article->id}}" class="d-block w-100" alt="Immagine 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/700x300" class="d-block w-100" alt="Immagine 2">
+                        <img src="https://picsum.photos/{{400+$article->id}}" class="d-block w-100" alt="Immagine 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/700x300" class="d-block w-100" alt="Immagine 3">
+                        <img src="https://picsum.photos/{{401+$article->id}}" class="d-block w-100" alt="Immagine 3">
                     </div>
                 </div>
                 <!-- Controlli del carosello -->

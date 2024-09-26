@@ -1,10 +1,26 @@
-<nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+<nav class="navbar" aria-label="First navbar example" style="background-color: var(--primaryColor1);">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{route('article.index')}}">Logo</a>
         <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+        <!-- form di ricerca -->
+        <form class="d-flex me-auto" role="search" action="{{ route('article.search') }}" method="GET">
+            <div class="input-group">
+                <input type="search" name="query" class="form-control" placeholder="Cerca nel sito" aria - label="search">
+                <button type="submit" class="input-group-text btn btn-outline-primary" id="basic-addon2">
+                <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                Search
+                </button>
+            </div>
+        </form>
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+            <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="35" height="30" class="logo d-inline-block align-text-top">
+            Rebels
+        </a>
+        <div class="navbar-collapse collapse" id="navbarsExample01">
             <ul class="navbar-nav me-auto mb-2">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Homepage</a>
@@ -53,17 +69,8 @@
                 </li>
                 @endauth
             </ul>
-            
 
-        
-            <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
-                <div class="input-group">
-                    <input type="search" name="query" class="form-control" placeholder="Search" aria - label="search">
-                    <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
-                        Search
-                    </button>
-                </div>
-            </form>
+
         </div>
     </div>
 </nav>

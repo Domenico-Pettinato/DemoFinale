@@ -40,6 +40,6 @@
     </div>
         <div class="container mt-3 mb-3">
             <a href="{{ route('article.index', ['article' => $article]) }}">
-            <button type="button" class="btn btn-outline-dark rounded-pill">Back</button>
+            <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
         </div>
 </x-layout>

@@ -8,12 +8,14 @@ use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
+    // Funzione per richiama la vista blade // 
     public function register()
     {
 
         return view('auth\register');
     }
 
+    // Funzione per eseguire il submit //
     public function submitapplication(Request $request)
     {
 
@@ -34,7 +36,8 @@ class RegisterController extends Controller
         // Invia l'email
         $contact = $request->all();
         Mail::to( $contact['email'])->send(new RegisterMail($contact));
-       
+        
+        // Messaggio di conferma //
         session()->flash('success', 'Registrazione avvenuta con successo!');
         return redirect()->route('login');
     }
