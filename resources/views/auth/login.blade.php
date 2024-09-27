@@ -1,6 +1,6 @@
 <x-layout>
     <div class=" d-flex justify-content-center">
-        <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="100" height="100" class="">
+        <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="100" height="100" class="rounded-circle mt-4 mb-4">
     </div>
     <!-- validazione del login -->
     <div class="col-12  mt-3 d-flex justify-content-center vh-100">
