@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Mail\RegisterMail;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -12,7 +14,7 @@ class RegisterController extends Controller
     public function register()
     {
 
-        return view('auth\register');
+        return view('auth.register');
     }
 
     // Funzione per eseguire il submit //
@@ -26,6 +28,12 @@ class RegisterController extends Controller
             'email' => 'required|email',
         ]);
 
+        // Creazione dell'utente e salvataggio nel database
+        $users = User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')), // Cripta la password
+        ]);
 
         // Dettagli dell'email
         $contact = [

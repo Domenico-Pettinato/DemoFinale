@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Registrazione ricevuta con successo</h1>
+    <h1>Registrazione avvenuta con successo</h1>
     <p>{{ $contact['name'] }}, grazie per esserti registrato sul nostro portale con la mail {{ $contact['email'] }}</p>
     <h2>Buona navigazione!</h2>
 </body>
