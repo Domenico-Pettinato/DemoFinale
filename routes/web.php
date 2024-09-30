@@ -30,4 +30,4 @@ Route::patch('reject/{article}', [RevisorController::class, 'reject'])->name('re
 Route::get('/search/article', [PageController::class, 'searchArticles']) ->name('article.search');
 
 //rotta per la lingua
-Route::post('/lingua/lang)', [PageController::class, 'setLanguage'])->name('setLocale');
+Route::post('/lingua/{lang})', [PageController::class, 'setLanguage'])->name('setLocale');
