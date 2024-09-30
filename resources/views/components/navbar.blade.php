@@ -15,6 +15,11 @@
                 </button>
             </div>
         </form>
+
+        <!-- lingue -->
+        <x-_locale lang="it" />
+        <x-_locale lang="en" />
+        <x-_locale lang="es" />
         <!-- logo -->
         <a class="navbar-brand" href="#">
             <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="35" height="30" class="logo d-inline-block align-text-top">
