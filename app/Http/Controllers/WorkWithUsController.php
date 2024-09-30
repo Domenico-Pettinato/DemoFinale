@@ -36,8 +36,8 @@ class WorkWithUsController extends Controller
 
         // Invia l'email
         $contact = $request->all();
-        Mail::to('mimmo.pettinato@gmail.com')->send(new InfoMail($contact));
-       
+        Mail::to($request->email)->send(new InfoMail($contact));
+    
         session()->flash('success', 'Candidatura inviata con successo!');
         return redirect()->route('workwithus');
     }
