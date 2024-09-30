@@ -1,4 +1,4 @@
-<div class="container">
+<div class=" container vh-100">
     @if(session('success'))
         <div class="alert alert-success">
             {{session('success')}}

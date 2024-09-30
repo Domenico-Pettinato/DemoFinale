@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use Faker\Provider\ar_EG\Address;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -20,21 +19,22 @@ class InfoMail extends Mailable
     {
         $this->contact = $contact;
     }
-
+    // Oggetto della  mail //
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Info Mail',
+            subject: 'Info Mail Candidatura',
         );
     }
 
     /**
-     * Get the message content definition.
+     * Get the message content definition. Definisco il percorso 
+     * da dove deve prendere il contenuto della mail
      */
     public function content(): Content
     {
         return new Content(
-            view: 'email',
+            view: 'mail.email',
         );
     }
 
@@ -46,11 +46,5 @@ class InfoMail extends Mailable
     public function attachments(): array
     {
         return [];
-    }
-
-    public function build() 
-    {
-        return $this->view('email');
-        
     }
 }

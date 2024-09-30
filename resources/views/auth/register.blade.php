@@ -1,4 +1,7 @@
 <x-layout>
+    <div class=" d-flex justify-content-center">
+        <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="100" height="100" class="rounded-circle  mb-2">
+    </div>
     <!-- validazione della registrazione -->
     <div class="col-12 mt-3 d-flex justify-content-center vh-100">
         @if ($errors->any())
@@ -10,7 +13,7 @@
             </ul>
         </div>
         @endif
-        <form method="POST" action="{{route('register')}}" class="form">
+        <form action="{{route('register')}}" method="POST" class="form">
             @csrf
             <div class="container">
                 <h1 class="h3 mb-3 fw-normal text-black">Form di Registrazione</h1>

@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\CandidaturaRicevuta;
+use App\Mail\AdminMail;
 use App\Mail\InfoMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use PharIo\Manifest\Email;
 
 class WorkWithUsController extends Controller
 {
+    // Funzione per richiama la vista blade //
     public function workwithus()
     {
 
         return view('workwithus');
     }
 
+    // Funzione per eseguire il submit //
     public function submitapplication(Request $request)
     {
 
@@ -27,17 +28,29 @@ class WorkWithUsController extends Controller
             'cv' => 'required|file|mimes:pdf,doc,docx|max:2048', // validazione del CV
         ]);
 
-
-        // Dettagli dell'email
+        // Dettaglio email nuovo utente
         $contact = [
             'name' => $request->input('name'),
             'email' => $request->input('email'),
         ];
 
-        // Invia l'email
+        // Salvo il file caricato sul form  e ottieni il percorso
+        $path = $request->file('cv')->store('attachments', 'public'); // Salvo nella cartella storage/app/public/attachments
+        $attachment = storage_path('app/public/' . $path); // Percorso completo del file
+
+        // Invia l'email all'utente candidato
         $contact = $request->all();
+<<<<<<< HEAD
         Mail::to($request->email)->send(new InfoMail($contact));
     
+=======
+        Mail::to($contact['email'])->send(new InfoMail($contact));
+
+        // Invia mail all'admin per visionare il cv di un candidato
+        Mail::to($contact['email'])->send(new AdminMail($contact, $attachment));
+
+        // Messaggio di conferma //
+>>>>>>> bdd94a522187ce3e64d726ccb48ffc768cdcd263
         session()->flash('success', 'Candidatura inviata con successo!');
         return redirect()->route('workwithus');
     }

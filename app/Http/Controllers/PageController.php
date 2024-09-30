@@ -38,4 +38,15 @@ class PageController extends Controller
             'query' => $query,
         ]);
     }
+
+
+        //funzione per la lingua- rotta POST associata al componenente _locale
+
+        public function setLanguage($lang)
+        {
+            session()->put('locale', $lang);
+            return redirect()->back();
+        }
+
+
 }
