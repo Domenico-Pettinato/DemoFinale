@@ -1,5 +1,5 @@
 <x-layout>
-    <h1>Articoli nella categoria: {{ $category->name }}</h1>
+    <h1>Articoli nella categoria: {{ $category->name }}   {{_('ui.Articlesinthecategory')}}</h1>
     <div class="container">
         <div class="row">
             @foreach ($articles as $article)

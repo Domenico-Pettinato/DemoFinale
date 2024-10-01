@@ -39,7 +39,7 @@ class RegisterMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail\newuser',
+            view: 'mail.newuser',
         );
     }
 
