@@ -72,10 +72,10 @@ html, body {
     margin-left: 12vw !important;
 }
 /* carousel */
-.carouselImgCustom{
-    /* size */
+/* .carouselImgCustom{
+    
     height: 60vh; 
-}
+} */
 
 /* revisor */
 .btnRevisorCustom{
@@ -94,4 +94,13 @@ html, body {
 .carousel {
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* CRUD view */
+.imgPreviewCustom{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
 }

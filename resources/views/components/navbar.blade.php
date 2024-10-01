@@ -21,7 +21,7 @@
         <x-_locale lang="en" />
         <x-_locale lang="es" />
         <!-- logo -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{route('article.index')}}">
             <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="35" height="30" class="logo d-inline-block align-text-top">
             Rebels
         </a>
