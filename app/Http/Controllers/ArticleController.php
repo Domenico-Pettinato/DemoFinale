@@ -8,7 +8,6 @@ use Illuminate\Container\Attributes\Auth as AttributesAuth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
 class ArticleController extends Controller
 {
     /**
@@ -16,11 +15,16 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        // ordina dal più recente massimo 6 articoli
-        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(6)->get();
+        // Se l'utente è autenticato mostra tutti gli articoli
+        if (Auth::check()) {
+            $articles = Article::orderBy('created_at', 'desc')->get(); 
+        } else {
+            // Se l'utente non è autenticato, mostra solo 6 articoli
+            $articles = Article::orderBy('created_at', 'desc')->take(6)->get();  
+        }
+
         return view('index', compact('articles'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
