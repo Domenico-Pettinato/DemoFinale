@@ -2,11 +2,13 @@
 
 namespace App\Livewire;
 
+use App\Jobs\ResizeImage;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Illuminate\Support\Facades\File;
 
 class CreateArticle extends Component
 {
@@ -20,12 +22,13 @@ class CreateArticle extends Component
     public $category_id;
 
     // validation
-    public function rules(){
+    public function rules()
+    {
         return [
-            'title'=> 'required',
-            'price'=> 'required',
-            'description'=> 'required|min:10|max:1000',
-            'category_id'=> 'required',
+            'title' => 'required',
+            'price' => 'required',
+            'description' => 'required|min:10|max:1000',
+            'category_id' => 'required',
         ];
     }
     // messages
@@ -38,16 +41,25 @@ class CreateArticle extends Component
         'category_id.required' => 'La categoria è obbligatoria.'
     ];
     // store articles
-    public function store(){
+    public function store()
+    {
         $this->validate();
-        
+
         Article::create([
-            'title'=>$this->title,
-            'price'=>$this->price,
-            'description'=>$this->description,
-            'category_id'=>$this->category_id,
-            'user_id'=>Auth::user()->id
+            'title' => $this->title,
+            'price' => $this->price,
+            'description' => $this->description,
+            'category_id' => $this->category_id,
+            'user_id' => Auth::user()->id
         ]);
+        if (count($this->images) > 0) {
+            foreach ($this->images as $image) {
+                $newFileName = "articles/{$this->article->id}";
+                $newImage = $this->article->images()->create(['patch' => $image->store($newFileName, 'public')]);
+                dispatch(new ResizeImage($newImage->path, 300, 300));
+            }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        }
         session()->flash('success', 'Articolo creato con successo!');
         $this->reset();
     }
