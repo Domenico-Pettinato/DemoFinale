@@ -12,7 +12,7 @@
                 @empty
                 <div class="col-12">
                     <h3 class="text-center">
-                        Nessun articolo corrisponde alla tua ricerca!
+                        {{__('ui.Noarticlefound')}}
                     </h3>
                 </div>
                 @endforelse

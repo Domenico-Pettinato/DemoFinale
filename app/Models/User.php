@@ -11,7 +11,7 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    public function article(){
+    public function articles(){
         return $this->hasMany(Article::class);
     }
 

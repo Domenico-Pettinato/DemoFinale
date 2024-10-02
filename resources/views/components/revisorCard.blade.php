@@ -1,17 +1,21 @@
-<div class="container vh-100">
+<div class="container mb-5">
     <div class="row mt-5">
         <div class="col-md-7">
             <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://picsum.photos/{{399+$article->id}}" class="d-block w-100" alt="Immagine 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://picsum.photos/{{400+$article->id}}" class="d-block w-100" alt="Immagine 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://picsum.photos/{{401+$article->id}}" class="d-block w-100" alt="Immagine 3">
-                    </div>
+                    @if ($article->images->count())
+                        @foreach ($article->images as $image)
+                            <div class="carousel-item active">
+                                <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="Immagine articolo">
+                            </div>
+                        @endforeach
+                    @else
+                        @for ($i = 0; $i < 6; $i++)
+                            <div class="carousel-item active">
+                                <img src="https://picsum.photos/{{400+$i}}" class="d-block w-100" alt="Immagine">
+                            </div>
+                        @endfor
+                    @endif
                 </div>
                 <!-- Controlli del carosello -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

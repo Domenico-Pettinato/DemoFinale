@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container pageWrapper vh-100">
+    <div class="container pageWrapper">
         <h1 class="text-center">In questa pagina troverai un elenco di tutti gli articoli da revisionare</h1>
         @if (session()->has('revMessage'))
             <div class="alert alert-secondary">
