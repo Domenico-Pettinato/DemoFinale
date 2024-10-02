@@ -29,15 +29,6 @@
                     @endif
                 </div>
                 <div class="carousel-inner">
-                    <!-- <div class="carousel-item active">
-                        <img src="https://placehold.co/600x400" class="d-block w-100 carouselImgCustom" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://placehold.co/600x400" class="d-block w-100 carouselImgCustom" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://placehold.co/600x400" class="d-block w-100 carouselImgCustom" alt="...">
-                    </div> -->
                     @foreach ($article->images as $key => $image)
                     <div class="carousel-item @if ($loop->first) active @endif>
                         <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100 rounded shadow" alt="Immagine {{$key + 1 }} dell'articolo {{ $article->title }}">

@@ -3,7 +3,7 @@
         <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-         <!-- logo -->
+        <!-- logo -->
         <a class="navbar-brand" href="#">
             <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="35" height="30" class="logo d-inline-block align-text-top">
             Rebels
@@ -79,8 +79,6 @@
                 </li>
                 @endauth
             </ul>
-
-
         </div>
     </div>
 </nav>
