@@ -6,14 +6,14 @@
     @endif
         <form wire:submit="store">
             <div class="mb-3">
-                <label for="createArticleTitle" class="form-label">Titolo</label>
+                <label for="createArticleTitle" class="form-label">{{__('ui.Title')}}</label>
                 <input type="text" class="form-control" id="createArticleTitle" aria-describedby="emailHelp" wire:model.blur="title">
                 @error('title')
                     <p class="text-danger fst-italic">{{$message}}</p>
                 @enderror
             </div>
             <select class="form-select" aria-label="Default select example" wire:model.blur="category_id">
-                <option value="" selected>Scegli la tua categoria</option>
+                <option value="" selected>{{__('ui.Chooseyourcategory')}}</option>
                 @foreach ($categories as $category)
                     <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
@@ -22,7 +22,7 @@
                 <p class="text-danger fst-italic">{{$message}}</p>
             @enderror
             <div class="mb-3">
-                <label for="createArticlePrice" class="form-label">Prezzo</label>
+                <label for="createArticlePrice" class="form-label">{{__('ui.Price')}}</label>
                 <input type="text" class="form-control" id="createArticlePrice" wire:model.blur="price">
                 @error('price')
                     <p class="text-danger fst-italic">{{$message}}</p>
@@ -35,6 +35,6 @@
                     <p class="text-danger fst-italic">{{$message}}</p>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary">Carica annuncio</button>
+            <button type="submit" class="btn btn-primary">{{__(''ui.Upload)}}</button>
         </form>
 </div>

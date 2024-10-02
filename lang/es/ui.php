@@ -27,4 +27,9 @@ return
         'Advertisementby'=>'Anuncio de',
         'Uploadad'=>'Cargar anuncio',
         'Description'=>'Descripciòn',
+        'Title'=>'Titulo',
+        'Chooseyourcategory'=>'Elige tu categoria',
+        'Document'=>'Documento',
+        'mail'=>'Gracias por enviar su solicitud por e-mail',
+
     ];
