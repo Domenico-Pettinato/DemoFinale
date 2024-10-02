@@ -15,12 +15,12 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        // Se l'utente è autenticato mostra tutti gli articoli
+        // Con utente autenticato mostra tutti gli articoli dal pu recente
         if (Auth::check()) {
-            $articles = Article::orderBy('created_at', 'desc')->get(); 
+            $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get(); 
         } else {
-            // Se l'utente non è autenticato, mostra solo 6 articoli
-            $articles = Article::orderBy('created_at', 'desc')->take(6)->get();  
+            // Con utente non autenticato, mostra solo 6 articoli dal pi+ recente
+            $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(6)->get(); 
         }
 
         return view('index', compact('articles'));
