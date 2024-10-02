@@ -35,6 +35,26 @@
                     <p class="text-danger fst-italic">{{$message}}</p>
                 @enderror
             </div>
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Carica le tue immagini</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple wire:model.live="temporary_images">
+            </div>
+            @if (!empty($images))
+                <div class="row">
+                    <div class="col-12">
+                        <p>Preview</p>
+                        <div class="row">
+                            @foreach ($images as $key=>$image)
+                                <div class="col d-flex flex-column align-items-center my-2">
+                                    <div class="imgPreviewCustom mx-auto" style="background-image: url({{$image->temporaryUrl()}})"></div>
+                                    <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">Elimina</button>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            @endif
+
             <button type="submit" class="btn btn-primary">Carica annuncio</button>
         </form>
 </div>
