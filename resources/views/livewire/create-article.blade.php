@@ -35,6 +35,6 @@
                     <p class="text-danger fst-italic">{{$message}}</p>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary">{{__('ui.Uploadad')}}</button>
+            <button type="submit" class="btn btn-primary">Carica annuncio</button>
         </form>
 </div>
