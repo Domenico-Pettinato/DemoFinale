@@ -3,11 +3,11 @@
         <h1 class="h3 mb-3 fw-normal text-black">{{__('ui.Workwithus')}}</h1>
     </header>
     <section>
-        <p>{{__(ui.welcome)}}</p>
+        <p>{{__('ui.welcome')}}</p>
 
         <h2 class="h3 mb-3 fw-normal text-black">{{__('ui.Openpositions')}}</h2>
         <ul>
-            <li>{{__('ui.Revisior')}}</li>
+            <li>{{__('ui.Revisor')}}</li>
         </ul>
         <!-- Messaggio di successo -->
         @if (session('success'))
