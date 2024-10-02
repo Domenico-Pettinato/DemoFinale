@@ -7,8 +7,9 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <title>Ocean games</title>
     </head>
-    <body style="background-color: var(--primaryColor2);"> <!-- Richiamo il colore che ho impostato tramite il root nel mio style.css -->
+    <body class="bodyBackground"> <!-- Richiamo il colore che ho impostato tramite il root nel mio style.css -->
         <x-navbar />
+        <x-newNavbar/>
         <main class="container mt-5">
             {{$slot}}
         </main>

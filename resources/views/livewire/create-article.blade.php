@@ -54,7 +54,6 @@
                     </div>
                 </div>
             @endif
-
             <button type="submit" class="btn btn-primary">Carica annuncio</button>
         </form>
 </div>
