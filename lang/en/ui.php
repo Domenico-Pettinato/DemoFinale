@@ -25,4 +25,7 @@ return
         'Advertisementby'=>'Advertisementby',
         'Uploadad'=>' Uploadad',
         'Description'=>'Description',
+        'Chooseyourcategory'=>'Chooseyourcategory',
+        'Document'=>'Documento',
+        'mail'=>'Thank you for sending your application by e-mail',
     ];

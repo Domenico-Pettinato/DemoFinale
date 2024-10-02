@@ -23,8 +23,11 @@ return
         'Price'=>'Prezzo',
         'Advertisementby'=>'Annuncio di',
         'Description'=>'Descrizione',
-        'Upload'=>'Caricamento dell annuncio',
-       
+        'Uploadad'=>'Caricamento dell annuncio',
+        'Title'=>'Titolo',
+        'Chooseyourcategory'=>'Scegli la tua categoria',
+        'Document'=>'Documento',
+        'mail'=>'Grazie per aver inviato la tua candidatura tramite e-mail',
 
 
 
