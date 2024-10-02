@@ -29,12 +29,12 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="createArticleDescription" class="form-label">Descrizione</label>
+                <label for="createArticleDescription" class="form-label">{{__('ui.Description')}}</label>
                 <textarea class="form-control" id="createArticleDescription" rows="3" wire:model.blur="description"></textarea>
                 @error('description')
                     <p class="text-danger fst-italic">{{$message}}</p>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary">Carica annuncio</button>
+            <button type="submit" class="btn btn-primary">{{__('ui.Uploadad')}}</button>
         </form>
 </div>

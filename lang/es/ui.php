@@ -9,21 +9,22 @@ return
 
 
         'Categories'=>'lista de categorias',
-        'Private area'=>'Area riservata',
-        'Create article'=>'Crea articolo',
-        'Work with us'=>'Lavora con noi',
+        'Privatearea'=>'Area reservada',
+        'Createarticle'=>'Crear un artìculo',
+        'Workwithus'=>'Trabaja con nosotros',
         'Logout'=>'Logout',
         'Login'=>'Login',
-        'Sign up'=>'Registrati',
-        'User'=>'Utente',
+        'Signup'=>'Regìstrate',
+        'User'=>'usuario',
         'Show article'=>'Mostra articolo',
         'Articlesinthecategory'=>'Artìculos en la categorìa',
-        ''=>'Risultato della ricerca',
+        'search result'=>'resultado de búsqueda',
 
         'Noarticlefound'=>'No se ha encontrado ningùn artìculo ',
         
-        'Category'=>'Categoria',
-        'Price'=>'Prezzo',
-        ''=>'Annuncio di',
-        
+        'Category'=>'Categorìa',
+        'Price'=>'Precio',
+        'Advertisementby'=>'Anuncio de',
+        'Uploadad'=>'Cargar anuncio',
+        'Description'=>'Descripciòn',
     ];
