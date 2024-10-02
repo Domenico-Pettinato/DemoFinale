@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Verifica la candidatura per posizione aperta</h1>
-    <p>L'utente {{ $contact['name'] }}, chiede di diventare revisore sul nostro portale</p>
+    <h1>{{__('ui.verify')}}</h1>
+    <p>{{ $contact['name'] }}, {{__('ui.asksuser')</p>
     <h2></h2>
 </body>
 </html>

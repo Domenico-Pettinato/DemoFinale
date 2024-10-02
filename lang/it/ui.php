@@ -12,7 +12,7 @@ return
         'Logout'=>'Logout',
         'Login'=>'Login',
         'Sign up'=>'Registrati',
-        'User'=>'Utente',
+        'user'=>'Utente',
         'Showarticle'=>'Mostra articolo',
         'Articlesinthecategory'=>'Articoli nella categoria',
         'searchresult'=>'Risultato della ricerca',
@@ -27,7 +27,27 @@ return
         'Title'=>'Titolo',
         'Chooseyourcategory'=>'Scegli la tua categoria',
         'Document'=>'Documento',
-        'mail'=>'Grazie per aver inviato la tua candidatura tramite e-mail',
+        'mail'=>'Grazie per aver inviato la tua candidatura ',
+        'receveid'=>'Candidatura ricevuta',
+        'Gl'=>'Good luck!',
+        'Search'=>'Cerca',
+        'next'=>'successivo',
+        'verify'=>'Controlla lo stato della candidatura per le posizioni aperte ',
+        'previous'=>'Precedente',
+        'asksuser'=>'L utente chiede di diventare revisore sul nostro portale',
+        'Openpositions'=>'Posizioni aperte',
+        'welcome'=>'Siamo sempre alla ricerca di persone talentuose e appassionate. Se vuoi unirti al nostro team, compila il modulo di candidatura qui sotto o inviaci il tuo CV.',
+        'Revisor'=>'Revisiore articoli',
+        'submit'=>'Invia la tua candidatura',
+        'information'=>'inserisci i tuoi dati',
+        'cv'=>'carica il tuo curriculum vitae',
+        'revision'=>'In questa pagina troverai un elenco di tutti gli articoli da revisionare',
+        'accept'=>'Accetta',
+        'reject'=>'Rifiuta',
+        'NA'=>'Non hai nessun articolo da revisionare',
+        
+
+
 
 
 

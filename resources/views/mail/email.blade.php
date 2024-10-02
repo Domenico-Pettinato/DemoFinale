@@ -6,9 +6,9 @@
     <title>{{__('ui.Document')}}</title>
 </head>
 <body>
-    <h1>Candidatura Ricevuta</h1>
-    <p>{{ $contact['name'] }}, {{__('ui.mail')}} {{ $contact['email'] }} per la posizione che stiamo ricercando.</p>
-    <h2>Goood luck!</h2>
+    <h1>{{__('ui.receveid')}}</h1>
+    <p>{{ $contact['name'] }}, {{__('ui.mail')}} {{ $contact['email'] }} </p>
+    <h2>{{__('ui.Gl')}}</h2>
 </body>
 </html>
     
