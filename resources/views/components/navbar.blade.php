@@ -36,7 +36,7 @@
                     <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Homepage</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Elenco Categorie</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">{{__('ui.Categories')}}</a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                         <li><a class="dropdown-item" href="{{ route('articles.filterByCategory', ['category' => $category->id]) }}">{{ $category->name }}</a></li>
@@ -51,12 +51,12 @@
                     </a>
                     <ul class="dropdown-menu">
                         @if (Auth::user()->is_revisor)
-                        <li><a class="dropdown-item" href="{{route('revisor.index')}}">Area riservata</a></li>
+                        <li><a class="dropdown-item" href="{{route('revisor.index')}}">{{__('ui.Privatearea')}}</a></li>
                         @endif
-                        <li><a class="dropdown-item" href="{{route('articles.create')}}">Crea articolo</a></li>
+                        <li><a class="dropdown-item" href="{{route('articles.create')}}">{{__('ui.Createarticle')}}</a></li>
                         <li class="dropdown-item">
                             <form action="{{ route('workwithus') }}" method="GET">
-                                <button type="submit" class="btn btn-outline-danger">Lavora con noi</button>
+                                <button type="submit" class="btn btn-outline-danger">{{__('ui.Workwithus')}}</button>
                             </form>
                             <form action="{{route('logout')}}" method="POST">
                                 @csrf
@@ -74,7 +74,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
-                        <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+                        <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.Signup')}}</a></li>
                     </ul>
                 </li>
                 @endauth
