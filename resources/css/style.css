@@ -33,14 +33,55 @@ html, body {
 /* navbar */
 .navbarCustom{
     position: fixed;
+    right: 0px;
     z-index: 99;
-    width: 100%;
+    width: 80vw;
     /* glass background */
     backdrop-filter: blur(2px) saturate(100%);
     -webkit-backdrop-filter: blur(2px) saturate(100%);
     background-color: rgba(255, 255, 255, 0.16);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
+    /* end glass */
+}
+.dropdownCustom{
+    background: linear-gradient(var(--secondaryColor1), var(--primaryColor2), var(--primaryColor1));
+    border: 1px solid var(--backgroundColor1);
+}
+.btnDropdownCustom{
+    margin: 5px;
+    width: 90%;
+}
+
+/* sidebar */
+.sidebarCustom{
+    width: 19vw !important;
+    height: 100vh;
+    color: var(--fontColor1);
+    position: absolute;
+    /* glass background */
+    backdrop-filter: blur(2px) saturate(100%);
+    -webkit-backdrop-filter: blur(2px) saturate(100%);
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    /* end glass */
+}
+
+.sideItemCustom{
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--fontColor1);
+    text-decoration: none;
+    background: none;
+    border: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.sideItemCustom:hover{
+    text-decoration: underline;
+    transform: scale(1.05);
 }
 
 /* card */

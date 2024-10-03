@@ -51,7 +51,7 @@ class CreateArticle extends Component
     { //updated + nome attributo è un hook di livewire (serve per monitorare ed aggiornare in tempo reale i cambiamenti della proprietà)
         if ($this->validate(
             [
-                'temporary_images.*' => 'image|max:1024', //regola per ogni immagine
+                'temporary_images.*' => 'image|max:2048', //regola per ogni immagine
                 'temporary_images' => 'max:6'
             ] //regola per l'array
         )) {
