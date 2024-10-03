@@ -48,6 +48,13 @@ return
         'accept'=>'Aceptar',
         'reject'=>'Rechazar',
         'NA'=>'No tienes ningun articulo por revisar',
+        'registration'=>'Formulario de Registro',
+        'enter'=>'Ingresa tus datos para crear una cuenta',
+        'Name'=>'Nombre',
+        'Password'=>'Repite contrasena',
+        'Pass'=>'Contrasena',
+        
+
         
 
 

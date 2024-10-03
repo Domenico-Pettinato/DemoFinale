@@ -45,6 +45,13 @@ return
         'accept'=>'Accetta',
         'reject'=>'Rifiuta',
         'NA'=>'Non hai nessun articolo da revisionare',
+        'registration'=>"Form di registrazione",
+        'enter'=>'Inserisci i tuoi dati per creare un account',
+        'Name'=>'Nome',
+        'Password'=>'Ripeti Password',
+        'Password'=>'Password',
+
+        
         
 
 

@@ -44,6 +44,10 @@ return
          'accept'=>'Accept',
         'reject'=>'Reject',
         'NA'=>'You have no articles to review',
+        'registration'=>'Registration Form',
+        'enter'=>'Enter your details to create an account',
+        'Name'=>'Name',
+        'Password'=>'Repeat Password',
+        'Pass'=>'Password',
         
-
     ];
