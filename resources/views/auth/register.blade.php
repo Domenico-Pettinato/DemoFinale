@@ -16,12 +16,12 @@
         <form action="{{route('register')}}" method="POST" class="form">
             @csrf
             <div class="container">
-                <h1 class="h3 mb-3 fw-normal text-black">Form di Registrazione</h1>
-                <p class="mt-2 mb-4 text-black">Inserisci i tuoi dati per creare un account.</p>
+                <h1 class="h3 mb-3 fw-normal text-black">{{__('ui.registration')}}</h1>
+                <p class="mt-2 mb-4 text-black">{{__('ui.enter')}}</p>
 
                 <div class="form-floating mb-3 ">
                     <input type="text" name="name" class="form-control" id="Name" placeholder="Enter Full Name" required>
-                    <label for="name">Name</label>
+                    <label for="name">{{__('ui.Name'}}</label>
                 </div>
 
                 <div class="form-floating mb-3">
@@ -31,12 +31,12 @@
 
                 <div class="form-floating mb-3">
                     <input type="password" placeholder="Enter Password" name="password" class="form-control" id="password" required>
-                    <label for="password">Password</label>
+                    <label for="password">{{__('ui.Pass'}}</label>
                 </div>
 
                 <div class="form-floating mb-3">
                     <input type="password" placeholder="Repeat Password" name="password_confirmation" class="form-control" id="password_confirmation" required>
-                    <label for="password_confirmation">Repeat Password</label>
+                    <label for="password_confirmation">{{__('ui.Password')}}</label>
                 </div>
 
                 <div class="form-floating mb-3">

@@ -1,13 +1,13 @@
 <x-layout>
     <header>
-        <h1 class="h3 mb-3 fw-normal text-black">Lavora con noi</h1>
+        <h1 class="h3 mb-3 fw-normal text-black">{{__('ui.Workwithus')}}</h1>
     </header>
     <section>
-        <p>Siamo sempre alla ricerca di persone talentuose e appassionate. Se vuoi unirti al nostro team, compila il modulo di candidatura qui sotto o inviaci il tuo CV.</p>
+        <p>{{__('ui.welcome')}}</p>
 
-        <h2 class="h3 mb-3 fw-normal text-black">Posizioni aperte</h2>
+        <h2 class="h3 mb-3 fw-normal text-black">{{__('ui.Openpositions')}}</h2>
         <ul>
-            <li>Revisiore articoli</li>
+            <li>{{__('ui.Revisor')}}</li>
         </ul>
         <!-- Messaggio di successo -->
         @if (session('success'))
@@ -19,8 +19,8 @@
         <form action="{{ route('submit_application') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="container">
-                <h1 class="h3 mb-3 fw-normal text-black">Invia la tua candidatura</h1>
-                <p class="mt-2 mb-4 text-black">Inserisci i tuoi dati:</p>
+                <h1 class="h3 mb-3 fw-normal text-black">{{__('ui.submit')}}</h1>
+                <p class="mt-2 mb-4 text-black">{{__('ui.information')}}:</p>
 
                 <div class="form-floating mb-3 ">
                     <input type="text" name="name" class="form-control" id="Name" placeholder="Enter Full Name" required>
@@ -34,11 +34,11 @@
 
                 <div class="form-floating mb-3">
                     <input type="file" id="cv" name="cv" class="form-control" required>
-                    <label for="cv">Carica il tuo CV</label>
+                    <label for="cv">{{__('ui.cv')}}</label>
                 </div>
             </div>
             <!-- Bottone di invio -->
-            <button type="submit" class="btn btn-primary">Invia candidatura</button>
+            <button type="submit" class="btn btn-primary">{{__('ui.submit')}}</button>
         </form>
     </section>
 </x-layout>
