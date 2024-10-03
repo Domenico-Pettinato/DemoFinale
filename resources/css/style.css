@@ -20,14 +20,27 @@ html, body {
 /* background */
 .bodyBackground{
     background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));
+    background-attachment: fixed;
 }
 /* logo */
 .logo {
     border-radius: 50px;
 }
-
 .biglogo {
     border-radius: 50px;
+}
+
+/* navbar */
+.navbarCustom{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    /* glass background */
+    backdrop-filter: blur(2px) saturate(100%);
+    -webkit-backdrop-filter: blur(2px) saturate(100%);
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 /* card */
