@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container pageWrapper">
-        <h1 class="text-center">In questa pagina troverai un elenco di tutti gli articoli da revisionare</h1>
+        <h1 class="text-center">{{__('ui.revision')}}</h1>
         @if (session()->has('revMessage'))
             <div class="alert alert-secondary">
                 {{session('revMessage')}}
@@ -13,17 +13,17 @@
                     <form action="{{route('accept', ['article'=>$article_to_check])}}" method="POST" class="mt-4 mb-5 me-5">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-success btnRevisorCustom">Accetta</button>
+                        <button type="submit" class="btn btn-success btnRevisorCustom">{{__('ui.accept')}}</button>
                     </form>
                     <form action="{{route('reject', ['article'=>$article_to_check])}}" method="POST" class="mt-4 mb-5">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger btnRevisorCustom">Rifiuta</button>
+                        <button type="submit" class="btn btn-danger btnRevisorCustom">{{__('ui.reject')}}</button>
                     </form>
                 </div>
             @else
                 <div class="col-12 mt-5">
-                    <h2 class="text-center">Non hai nessun articolo da revisionare</h2>
+                    <h2 class="text-center">{{__('ui.NA')}}</h2>
                 </div>
             @endif
         </div>

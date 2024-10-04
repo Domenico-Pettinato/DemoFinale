@@ -41,30 +41,23 @@
                     </div>
                 </div>
             </div>
+            {{-- Carousel --}}
 
-            <!-- Colonna di destra con descrizione e dettagli -->
-            <div class="col-md-6 col-12 mb-4">
-                <div class="p-2 mt-3">
-                    <!-- Descrizione dell'articolo -->
-                    <h5 class="">Descrizione:</h5>
-                    <p>{{ $article->description }}</p>
-                </div>
 
-                <div class="p-2 custom-margin">
-                    <!-- Categoria dell'articolo -->
-                    <h5 class="">Categoria: {{$article->category->name}}</h5>
-                    <!-- Data di creazione e Creatore dell'articolo-->
-                    <h5 class="">Creato il: {{$article->created_at->format('d/m/Y')}} da: {{$article->user->name}}</h5>
-                </div>
+            <h5 class="showElementCustom">Categoria: {{$article->category->name}}</h5>
+            <h5 class="showElementCustom">Prezzo: €{{$article->price}}</h5>
+            <h6 class="showElementCustom">Annuncio di: {{$article->user->name}}</h6>
 
-            </div>
-
-            <!-- Pulsante di ritorno -->
-            <div class="container mt-3 mb-3">
-                <a href="{{ route('article.index', ['article' => $article]) }}">
-                    <button type="button" class="btn btn-outline-primary rounded-pill">Indietro</button>
-                </a>
-            </div>
+            @else
+                <img src="https://placehold.co/600x400" alt="">
+            @endif
         </div>
+        <h5 class="showElementCustom">Categoria: {{$article->category->name}}</h5>
+        <h5 class="showElementCustom">Prezzo: €{{$article->price}}</h5>
+        <h6 class="showElementCustom">Annuncio di: {{$article->user->name}}</h6>
+    </div>
+    <div class="container mt-3 mb-3">
+        <a href="{{ route('article.index', ['article' => $article]) }}">
+            <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
     </div>
 </x-layout>
