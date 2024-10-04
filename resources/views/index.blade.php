@@ -1,7 +1,8 @@
 <x-layout>
+    <x-sidebar/>
     <div class="container">
         <div class="row">
-             @foreach ($articles as $article)
+            @foreach ($articles as $article)
                 <x-card :article="$article"/> 
             @endforeach
             {{-- @foreach ($article->images as $key => $image)
@@ -10,6 +11,6 @@
             </div>
             @endforeach --}}
         </div>
-        <div style="height: 2000vh"></div>
+        {{-- <div style="height: 2000vh"></div> --}}
     </div>
 </x-layout>

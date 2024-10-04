@@ -8,9 +8,9 @@
         <title>Ocean games</title>
     </head>
     <body class="bodyBackground"> <!-- Richiamo il colore che ho impostato tramite il root nel mio style.css -->
-        <x-navbar />
+        {{-- <x-navbar /> --}}
         <x-newNavbar/>
-        <main class="container mt-5">
+        <main>
             {{$slot}}
         </main>
         <x-footer/>
