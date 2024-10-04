@@ -35,6 +35,9 @@
                 <div class="form-floating mb-3">
                     <input type="file" id="cv" name="cv" class="form-control" required>
                     <label for="cv">{{__('ui.cv')}}</label>
+                    @error('cv')
+                        {{$message}}
+                    @enderror
                 </div>
             </div>
             <!-- Bottone di invio -->

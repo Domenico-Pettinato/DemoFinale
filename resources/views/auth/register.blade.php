@@ -21,7 +21,7 @@
 
                 <div class="form-floating mb-3 ">
                     <input type="text" name="name" class="form-control" id="Name" placeholder="Enter Full Name" required>
-                    <label for="name">{{__('ui.Name'}}</label>
+                    <label for="name">{{__('ui.Name')}}</label>
                 </div>
 
                 <div class="form-floating mb-3">
@@ -31,7 +31,7 @@
 
                 <div class="form-floating mb-3">
                     <input type="password" placeholder="Enter Password" name="password" class="form-control" id="password" required>
-                    <label for="password">{{__('ui.Pass'}}</label>
+                    <label for="password">{{__('ui.Pass')}}</label>
                 </div>
 
                 <div class="form-floating mb-3">
