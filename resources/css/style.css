@@ -20,6 +20,7 @@ html, body {
 /* background */
 .bodyBackground{
     background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));
+    background-attachment: fixed;
 }
 /* logo */
 .logo {
@@ -77,6 +78,11 @@ html, body {
 .showElementCustom{
     margin-left: 12vw !important;
 }
+
+.custom-margin {
+    margin-top: 300px; 
+}
+
 /* carousel */
 /* .carouselImgCustom{
     
