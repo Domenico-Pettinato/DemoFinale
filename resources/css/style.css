@@ -169,3 +169,47 @@ html, body {
     height: 120px;
     width: 120px;
 }
+
+
+
+
+/* Effetto hover sui campi di input */
+.form-control {
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    border: 2px solid var(--secondaryColor2);
+    margin-bottom: 20px; /*  margine tra gli input */
+    background: rgba(255, 255, 255, 0.8); /* Sfondo chiaro e traslucido per gli input */
+}
+.form-control:focus {
+    border-color: var(--primaryColor1);
+    box-shadow: 0px 0px 10px var(--primaryColor1);
+}
+
+/* Effetto hover sul pulsante di login */
+.btn-primary {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 100%; 
+    padding: 15px; /* Aggiungi padding per renderlo più grande */
+    font-size: 1.3rem; /* Aumenta la dimensione del testo */
+}
+.btn-primary:hover {
+    background-color: var(--contrastColor1);
+    transform: scale(1.1); 
+}
+
+
+
+.form {
+
+    background: linear-gradient(135deg, var(--primaryColor2), var(--primaryColor1)); 
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); /* Ombra per dare profondità */
+    border-radius: 20px;
+    padding: 100px; /* Aumenta il padding */
+    max-width: 1000px; 
+    margin: auto;
+    animation: fadeIn 0.5s ease-in-out; /* Animazione per l'ingresso */
+
+   
+}
+

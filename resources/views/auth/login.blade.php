@@ -45,4 +45,14 @@
             @endif
         </form>
     </div>
+    {{-- 
+    <div class="d-flex justify-content-center mt-3">
+        <a href="{{ route('login.facebook') }}" class="btn btn-primary mx-2">
+            <i class="fab fa-facebook"></i> Login con Facebook
+        </a>
+        <a href="{{ route('login.instagram') }}" class="btn btn-danger mx-2">
+            <i class="fab fa-instagram"></i> Login con Instagram
+        </a>
+    </div>
+    --}}
 </x-layout>
