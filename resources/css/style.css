@@ -133,7 +133,11 @@ html, body {
 }
 
 .custom-margin {
-    margin-top: 300px; 
+    /* margin-bottom: 50vh;  */
+}
+
+.custom-margin-2 {
+    text-align: right; 
 }
 
 /* carousel */

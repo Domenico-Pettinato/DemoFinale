@@ -1,10 +1,9 @@
 <x-layout>
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="container d-flex justify-content-center align-items-center fst-italic" style="min-height: 100vh;">
         <div class="row w-100">
             <!-- Colonna di sinistra con il titolo e il carosello -->
             <div class="col-md-6 col-12 mb-4">
-                <div class="p-3 ">
-                    <!-- Titolo dell'articolo -->
+                <div class="p-3">
                     <h1 class="mb-4 text-center ">{{$article->title}}</h1>
                     <!-- Carousel -->
                     @if ($article->images->count() > 0)
@@ -32,7 +31,12 @@
                         </button>
                         @endif
                     </div>
-                    @endif
+                    <!-- Sezione video -->
+                    <div class="container">
+                        <div class="d-flex justify-content-center p-3">
+                            <iframe src="https://www.youtube.com/embed/XhP3Xh4LMA8" title="YouTube video" allowfullscreen></iframe>
+                        </div>
+                    </div>
                     <!-- Sezione acquisto articolo -->
                     <div class="d-flex justify-content-between align-items-center p-3 border rounded bg-light mb-3">
                         <h5 class="mb-0">Acquista Articolo</h5>
@@ -41,23 +45,28 @@
                     </div>
                 </div>
             </div>
-            {{-- Carousel --}}
-
-
-            <h5 class="showElementCustom">Categoria: {{$article->category->name}}</h5>
-            <h5 class="showElementCustom">Prezzo: €{{$article->price}}</h5>
-            <h6 class="showElementCustom">Annuncio di: {{$article->user->name}}</h6>
-
-            @else
-                <img src="https://placehold.co/600x400" alt="">
             @endif
+
+            <!-- Colonna di destra con descrizione categoria data e prezzo -->
+            <div class="col-md-6 col-12 mb-4">
+                <div class="custom-margin">
+                    <h3>Descrizione:</h3>
+                    <p class="h5">{{$article->description}}</p>
+                </div>
+
+                <div class="custom-margin-2">
+                    <p class="h5 showElementCustom">Categoria: {{$article->category->name}}</p>
+                    <p class="h5 showElementCustom">Annuncio creato il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
+                    <p class="h5 showElementCustom">Prezzo: €{{$article->price}}</p>
+                </div>
+            </div>
+
+
+
+            <div class="container mt-3 mb-3">
+                <a href="{{ route('article.index', ['article' => $article]) }}">
+                    <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
+            </div>
         </div>
-        <h5 class="showElementCustom">Categoria: {{$article->category->name}}</h5>
-        <h5 class="showElementCustom">Prezzo: €{{$article->price}}</h5>
-        <h6 class="showElementCustom">Annuncio di: {{$article->user->name}}</h6>
-    </div>
-    <div class="container mt-3 mb-3">
-        <a href="{{ route('article.index', ['article' => $article]) }}">
-            <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
     </div>
 </x-layout>

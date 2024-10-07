@@ -65,3 +65,12 @@
             <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
     </div>
 </x-layout>
+
+
+
+
+
+       
+                <h4>Colonna 2</h4>
+                <p>Contenuto della colonna 2. Come la prima colonna, anche questa si adatterà in modo responsive su schermi piccoli e grandi.</p>
+ 
