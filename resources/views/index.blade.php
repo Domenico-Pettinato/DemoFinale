@@ -1,22 +1,27 @@
 <x-layout>
-    <div class="container vh-100 mt-5"> 
-        <div class="row g-4">
+    {{-- normale --}}
+    {{-- <x-sidebar/>
+    <div class="container">
+        <div class="row">
             @foreach ($articles as $article)
-            <div class="col-12 col-md-4">
-                <div class="card h-100">
-                    <!-- Ciclo per le immagini dell'articolo -->
-                    @if($article->images->count() > 0)
-                    @foreach ($article->images as $key => $image)
-                    <img src="{{ $image->getUrl(300, 300) }}" class="card-img-top img-fluid rounded shadow" alt="Immagine {{$key + 1}} dell'articolo {{ $article->title }}">
-                    @endforeach
-                    @endif
-
-                    <div class="card-body">
-                        <x-card :article="$article" />
-                    </div>
-                </div>
-            </div>
+                <x-card :article="$article"/> 
             @endforeach
         </div>
+    </div> --}}
+    {{-- carosello --}}
+    <div id="carouselExample" class="carousel slide carouselCustom" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @foreach ($articles as $article)
+                <div class="carousel-item {{$loop->first ? 'active' : ''}}">
+                    <x-indexCardCarousel :article="$article"/>
+                </div>
+            @endforeach
+        </div>
+            {{-- @foreach ($article->images as $key => $image)
+            <div class="col-6 col-md-4 mb-4 text-center">
+                <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid rounded shadow" alt="Immagine {{$key + 1 }} dell'articolo {{ $article_to_chack->title }}">
+            </div>
+            @endforeach --}}
+        </div>    
     </div>
 </x-layout>

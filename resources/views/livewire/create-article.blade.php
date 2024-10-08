@@ -1,15 +1,25 @@
 <div class=" container vh-100 pt-5">
     @if(session('success'))
-    <div class="alert alert-success">
-        {{session('success')}}
-    </div>
-    @endif
-    <form wire:submit="store">
-        <div class="mb-3">
-            <label for="createArticleTitle" class="form-label">{{__('ui.Title')}}</label>
-            <input type="text" class="form-control" id="createArticleTitle" aria-describedby="emailHelp" wire:model.blur="title">
-            @error('title')
-            <p class="text-danger fst-italic">{{$message}}</p>
+        <div class="alert alert-success">
+            {{session('success')}}
+        </div>
+    @endif 
+        <form wire:submit="store">
+            <div class="pt-5">
+                <label for="createArticleTitle" class="form-label">{{__('ui.Title')}}</label>
+                <input type="text" class="form-control" id="createArticleTitle" aria-describedby="emailHelp" wire:model.blur="title">
+                @error('title')
+                    <p class="text-danger fst-italic">{{$message}}</p>
+                @enderror
+            </div>
+            <select class="form-select" aria-label="Default select example" wire:model.blur="category_id">
+                <option value="" selected>{{__('ui.Chooseyourcategory')}}</option>
+                @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+            </select>
+            @error('category_id')
+                <p class="text-danger fst-italic">{{$message}}</p>
             @enderror
         </div>
         <select class="form-select" aria-label="Default select example" wire:model.blur="category_id">
