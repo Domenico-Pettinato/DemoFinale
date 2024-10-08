@@ -12,12 +12,7 @@ use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Illuminate\Support\Facades\File;
 use Livewire\WithFileUploads;
-
 use App\Jobs\RemoveFaces;
-//use App\Jobs\GoogleVisionSafeSearch;
-//use App\Jobs\GoogleVisionLabelImage;
-
-
 
 class CreateArticle extends Component
 {

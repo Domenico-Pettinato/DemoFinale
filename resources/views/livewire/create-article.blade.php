@@ -4,9 +4,8 @@
             {{session('success')}}
         </div>
     @endif
-
-    <form wire:submit.prevent="store">
-        <div class="pt-5">
+    <form wire:submit="store">
+        <div class="mb-3">
             <label for="createArticleTitle" class="form-label">{{__('ui.Title')}}</label>
             <input type="text" class="form-control" id="createArticleTitle" aria-describedby="emailHelp" wire:model.blur="title">
             @error('title')
@@ -46,24 +45,21 @@
         </div>
 
         @if (!empty($images))
-        <div class="row">
-            <div class="col-12">
-                <p>Preview</p>
-                <div class="row">
-                    @foreach ($images as $key => $image)
-                    @if ($image)
-                    <div class="col d-flex flex-column align-items-center my-2">
-                        <div class="imgPreviewCustom mx-auto" style="background-image: url({{ $image->temporaryUrl() }})"></div>
-                        <button type="button" class="btn btn-danger" wire:click="removeImage({{ $key }})">Elimina</button>
+            <div class="row">
+                <div class="col-12">
+                    <p>Preview</p>
+                    <div class="row">
+                        @foreach ($images as $key=>$image)
+                            <div class="col d-flex flex-column align-items-center my-2">
+                                <div class="imgPreviewCustom mx-auto" style="background-image: url({{$image->temporaryUrl()}})"></div>
+                                <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">Elimina</button>
+                            </div>
+                        @endforeach
                     </div>
-                    @endif
-                    @endforeach
                 </div>
             </div>
-        </div>
         @endif
-
-        <button type="submit" class="btn btn-primary">Carica annuncio</button>
+        <button type="submit" class="btn btn-primary">Carica annuncio</button> 
     </form>
     <x-footer/>
 </div>
