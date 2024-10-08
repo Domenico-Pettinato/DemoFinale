@@ -49,5 +49,6 @@ return
         'Name'=>'Name',
         'Password'=>'Repeat Password',
         'Pass'=>'Password',
+        'Title'=>'Title',
         
     ];

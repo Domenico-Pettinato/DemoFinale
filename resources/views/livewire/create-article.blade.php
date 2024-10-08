@@ -12,16 +12,6 @@
                     <p class="text-danger fst-italic">{{$message}}</p>
                 @enderror
             </div>
-            <select class="form-select" aria-label="Default select example" wire:model.blur="category_id">
-                <option value="" selected>{{__('ui.Chooseyourcategory')}}</option>
-                @foreach ($categories as $category)
-                    <option value="{{$category->id}}">{{$category->name}}</option>
-                @endforeach
-            </select>
-            @error('category_id')
-                <p class="text-danger fst-italic">{{$message}}</p>
-            @enderror
-        </div>
         <select class="form-select" aria-label="Default select example" wire:model.blur="category_id">
             <option value="" selected>{{__('ui.Chooseyourcategory')}}</option>
             @foreach ($categories as $category)
