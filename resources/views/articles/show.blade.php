@@ -3,8 +3,7 @@
         <div class="row w-100">
             <!-- Colonna di sinistra con il titolo e il carosello -->
             <div class="col-md-6 col-12 mb-4">
-                <div class="p-3 ">
-                    <!-- Titolo dell'articolo -->
+                <div class="p-3">
                     <h1 class="mb-4 text-center ">{{$article->title}}</h1>
                     <!-- Carousel -->
                     @if ($article->images->count() > 0)
@@ -97,17 +96,18 @@
                         </button>
                         @endif
                     </div>
-                    Sezione video
+                    
+                    <!-- Sezione video
                     <div class="container">
                         <div class="d-flex justify-content-center p-3">
                             <iframe src="https://www.youtube.com/embed/XhP3Xh4LMA8" title="YouTube video" allowfullscreen></iframe>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Sezione acquisto articolo -->
                     <div class="d-flex justify-content-between align-items-center p-3 border rounded bg-light mb-3">
                         <h5 class="mb-0">Acquista Articolo</h5>
                         <span class="text-success fw-bold">€{{$article->price}}</span>
-                        <button type="button" class="btn btn-primary">Acquista</button>
+                        <button type="button" class="btn btn-primary btn-sm">Acquista</button>
                     </div>
                 </div>
             </div>

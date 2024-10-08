@@ -13,6 +13,7 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
+    
     public function index()
     {
         // Con utente autenticato mostra tutti gli articoli dal pu recente

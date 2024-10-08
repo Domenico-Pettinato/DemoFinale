@@ -176,8 +176,9 @@ html, body {
     margin-left: 12vw !important;
 }
 
-.custom-margin {
-    margin-top: 300px; 
+
+.custom-margin-2 {
+    text-align: right; 
 }
 
 /* carousel */
