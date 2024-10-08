@@ -19,7 +19,7 @@ html, body {
 
 /* background */
 .bodyBackground{
-    background: url(/Users/taniaadmin/Desktop/aulab /presto_aula2_Massidda_Pettinato_prete/public/images/BackgroundOceanGames.jpg);
+    background: url(/public/images/BackgroundOceanGames.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /* background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));

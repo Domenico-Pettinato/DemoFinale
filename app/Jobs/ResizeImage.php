@@ -41,9 +41,9 @@ class ResizeImage implements ShouldQueue
         Image::load($srcPath)
         ->crop($w, $h, CropPosition::Center)
         ->watermark(
-            base_path('pulic/images/logo.jpg'),
-            width: 50,
-            height: 50, 
+            base_path('public\images\logo.jpg'),//\public\images\logo.jpg NON APPARE IL LOGO, VEDERE DOMANI COL DOCENTE
+            width: $w * 0.5,
+            height: $h * 0.5, 
             paddingX: 5,
             paddingY: 5,
             paddingUnit: Unit::Percent
