@@ -11,6 +11,12 @@ use Livewire\Component;
 use Illuminate\Support\Facades\File;
 use Livewire\WithFileUploads;
 
+use App\Jobs\RemoveFaces;
+//use App\Jobs\GoogleVisionSafeSearch;
+//use App\Jobs\GoogleVisionLabelImage;
+
+
+
 class CreateArticle extends Component
 {
     use WithFileUploads;
@@ -93,13 +99,25 @@ class CreateArticle extends Component
             foreach ($this->images as $image) {
                 $newFileName = "articles/{$article->id}";
                 $newImage = $article->images()->create(['path' => $image->store($newFileName, 'public')]);
-                dispatch(new ResizeImage($newImage->path, 300, 300));
+                //dispatch(new ResizeImage($newImage->path, 300, 300));
+
+                // Esegue una serie di job in sequenza usando withChain()
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 300, 300),  // Ridimensiona l'immagine
+                    new GoogleVisionSafeSearch($newImage->id),   // Analizza l'immagine per contenuti inappropriati
+                    new GoogleVisionLabelImage($newImage->id)    // Applica etichette all'immagine
+                ])->dispatch($newImage->id); // Dispatch per avviare la catena di job
             }
+
+            // Elimina la cartella temporanea livewire dopo aver processato le immagini
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         session()->flash('success', 'Articolo creato con successo!');
         $this->cleanForm();
     }
+
+        
+    
 
     public function render()
     {
