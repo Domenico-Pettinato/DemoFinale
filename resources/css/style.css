@@ -92,8 +92,8 @@ html, body {
 
 /* index view */
 .carouselCustom{
-    margin-top: 10vh;
-    margin-left: 40vw;
+    margin-top: 6vh;
+    /* margin-left: 8vw; */
 }
 .indexCardCarouselWrapper{
     /* background: linear-gradient(var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2)); */
@@ -104,14 +104,14 @@ html, body {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     /* end glass */
-    width: 50vw;
-    height: 60vh;
+    width: 40vw;
+    height: 50vh;
     border-radius: 12px;
 
 }
 .indexCardImg{
-    width: 50vw;
-    height: 54vh;
+    width: 40vw;
+    height: 44vh;
     padding: 5px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -253,7 +253,5 @@ html, body {
     max-width: 1000px; 
     margin: auto;
     animation: fadeIn 0.5s ease-in-out; /* Animazione per l'ingresso */
-
-   
 }
 
