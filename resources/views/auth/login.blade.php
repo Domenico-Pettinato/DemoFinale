@@ -46,16 +46,18 @@
             @endif
         </form>
     </div>
-    {{-- 
+{{-- ICONE CLICCABILI --}}
     <div class="d-flex justify-content-center mt-3">
-        <a href="{{ route('login.facebook') }}" class="btn btn-primary mx-2">
-            <i class="fab fa-facebook"></i> Login con Facebook
+        <a href="/change-language/en" class="mx-2">
+            <img src="{{ asset('images/en-flag.png') }}" alt="English" width="30" height="20">
         </a>
-        <a href="{{ route('login.instagram') }}" class="btn btn-danger mx-2">
-            <i class="fab fa-instagram"></i> Login con Instagram
+        <a href="/change-language/it" class="mx-2">
+            <img src="{{ asset('images/it-flag.png') }}" alt="Italian" width="30" height="20">
+        </a>
+        <a href="/change-language/fr" class="mx-2">
+            <img src="{{ asset('images/fr-flag.png') }}" alt="French" width="30" height="20">
         </a>
     </div>
-    --}}
 
     
 
