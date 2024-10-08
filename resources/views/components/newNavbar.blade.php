@@ -19,73 +19,75 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Negozio</a>
                 </li>
+                @auth
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('articles.create')}}">{{__('ui.Createarticle')}}</a>
                 </li>
+                @endauth
                 @guest
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle ms-auto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-circle"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdownCustom">
-                            <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
-                            <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.Signup')}}</a></li>
-                            <hr>
-                            <div class="d-flex align-items-center">
-                                <x-_locale lang="it" />
-                                <p class="mt-3">Italiano</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <x-_locale lang="en" />
-                                <p class="mt-3">English</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <x-_locale lang="es" />
-                                <p class="mt-3">Español</p>
-                            </div>
-                        </ul>
-                    </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ms-auto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdownCustom">
+                        <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+                        <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.Signup')}}</a></li>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <x-_locale lang="it" />
+                            <p class="mt-3">Italiano</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <x-_locale lang="en" />
+                            <p class="mt-3">English</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <x-_locale lang="es" />
+                            <p class="mt-3">Español</p>
+                        </div>
+                    </ul>
+                </li>
                 @endguest
                 @auth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle ms-auto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-circle"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdownCustom">
-                            <li>
-                                <p class="text-center">Ciao {{Auth::user()->name}}</p>
-                            </li>
-                            <hr>
-                            @if (Auth::user()->is_revisor)
-                                <li><a class="dropdown-item" href="{{route('revisor.index')}}">{{__('ui.Privatearea')}}</a></li>  
-                            @endif
-                            <li><a class="dropdown-item text-center" href="{{route('articles.create')}}">{{__('ui.Createarticle')}}</a></li>
-                            <li>
-                                <form action="{{ route('workwithus') }}" method="GET">
-                                    <button type="submit" class="btn btn-outline-success btnDropdownCustom">{{__('ui.Workwithus')}}</button>
-                                </form>
-                            </li>
-                            <li>
-                                <form action="{{route('logout')}}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn btn-outline-danger btnDropdownCustom">Logout</button>
-                                </form>
-                            </li>
-                            <hr>
-                            <div class="d-flex align-items-center">
-                                <x-_locale lang="it" />
-                                <p class="mt-3">Italiano</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <x-_locale lang="en" />
-                                <p class="mt-3">English</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <x-_locale lang="es" />
-                                <p class="mt-3">Español</p>
-                            </div>
-                        </ul>
-                    </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ms-auto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdownCustom">
+                        <li>
+                            <p class="text-center">Ciao {{Auth::user()->name}}</p>
+                        </li>
+                        <hr>
+                        @if (Auth::user()->is_revisor)
+                        <li><a class="dropdown-item" href="{{route('revisor.index')}}">{{__('ui.Privatearea')}}</a></li>
+                        @endif
+                        <li><a class="dropdown-item text-center" href="{{route('articles.create')}}">{{__('ui.Createarticle')}}</a></li>
+                        <li>
+                            <form action="{{ route('workwithus') }}" method="GET">
+                                <button type="submit" class="btn btn-outline-success btnDropdownCustom">{{__('ui.Workwithus')}}</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="{{route('logout')}}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-outline-danger btnDropdownCustom">Logout</button>
+                            </form>
+                        </li>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <x-_locale lang="it" />
+                            <p class="mt-3">Italiano</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <x-_locale lang="en" />
+                            <p class="mt-3">English</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <x-_locale lang="es" />
+                            <p class="mt-3">Español</p>
+                        </div>
+                    </ul>
+                </li>
                 @endauth
             </ul>
         </div>

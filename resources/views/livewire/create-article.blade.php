@@ -1,4 +1,4 @@
-<div class=" container vh-100">
+<div class=" container vh-100 pt-5">
     @if(session('success'))
         <div class="alert alert-success">
             {{session('success')}}
@@ -54,6 +54,6 @@
                 </div>
             </div>
         @endif
-        <button type="submit" class="btn btn-primary">Carica annuncio</button>
+        <button type="submit" class="btn btn-primary">Carica annuncio</button> 
     </form>
 </div>

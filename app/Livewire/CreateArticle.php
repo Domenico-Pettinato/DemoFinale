@@ -2,6 +2,8 @@
 
 namespace App\Livewire;
 
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use App\Jobs\ResizeImage;
 use App\Models\Article;
 use App\Models\Category;
@@ -21,6 +23,7 @@ class CreateArticle extends Component
 {
     use WithFileUploads;
 
+    public $article;
     #[Validate()]
     public $title;
     #[Validate()]
@@ -93,6 +96,7 @@ class CreateArticle extends Component
             'description' => $this->description,
             'category_id' => $this->category_id,
             'user_id' => Auth::user()->id
+            
         ]);
 
         if (count($this->images) > 0) {

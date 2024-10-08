@@ -19,7 +19,7 @@ html, body {
 
 /* background */
 .bodyBackground{
-    background: url(C:\Users\fmass\Desktop\Lavoro\progettoFinale\public\images\BackgroundOceanGames.jpg);
+    background: url(/Users/taniaadmin/Desktop/aulab /presto_aula2_Massidda_Pettinato_prete/public/images/BackgroundOceanGames.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /* background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));
@@ -176,8 +176,9 @@ html, body {
     margin-left: 12vw !important;
 }
 
-.custom-margin {
-    margin-top: 300px; 
+
+.custom-margin-2 {
+    text-align: right; 
 }
 
 /* carousel */
@@ -230,12 +231,12 @@ html, body {
     box-shadow: 0px 0px 10px var(--primaryColor1);
 }
 
-/* Effetto hover sul pulsante di login */
+
 .btn-primary {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    width: 100%; 
     padding: 15px; /* Aggiungi padding per renderlo più grande */
     font-size: 1.3rem; /* Aumenta la dimensione del testo */
+    width: auto;
 }
 .btn-primary:hover {
     background-color: var(--contrastColor1);
