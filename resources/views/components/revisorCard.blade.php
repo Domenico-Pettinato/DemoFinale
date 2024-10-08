@@ -1,8 +1,8 @@
 <div class="container mb-5">
     <div class="row mt-5">
         <div class="col-md-7">
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+            <div id="carouselExample" class="revisorCarousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner-custom">
                     @if ($article->images->count())
                         @foreach ($article->images as $image)
                             <div class="carousel-item active">
