@@ -3,9 +3,9 @@
         <div class="alert alert-success">
             {{session('success')}}
         </div>
-    @endif
+    @endif 
         <form wire:submit="store">
-            <div class="mb-3">
+            <div class="pt-5">
                 <label for="createArticleTitle" class="form-label">{{__('ui.Title')}}</label>
                 <input type="text" class="form-control" id="createArticleTitle" aria-describedby="emailHelp" wire:model.blur="title">
                 @error('title')

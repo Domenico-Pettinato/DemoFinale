@@ -20,3 +20,4 @@ yarn-error.log
 /.vscode
 /.zed
 /storage/*.index
+/config/google_credential.json
