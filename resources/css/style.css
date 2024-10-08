@@ -19,7 +19,7 @@ html, body {
 
 /* background */
 .bodyBackground{
-    background: url(C:\Users\fmass\Desktop\Lavoro\progettoFinale\public\images\BackgroundOceanGames.jpg);
+    background: url(/public/images/BackgroundOceanGames.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /* background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));

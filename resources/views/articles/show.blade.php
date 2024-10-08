@@ -50,6 +50,7 @@
             {{-- @else
                 <img src="https://placehold.co/600x400" alt="">
             @endif --}}
+            
         </div>
         <h5 class="showElementCustom">Categoria: {{$article->category->name}}</h5>
         <h5 class="showElementCustom">Prezzo: €{{$article->price}}</h5>
