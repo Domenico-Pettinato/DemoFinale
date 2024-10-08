@@ -3,7 +3,7 @@
 namespace App\Jobs;
 
 use App\Models\Image;
-use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Foundation\Queue\Queueable;
@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 
 class GoogleVisionSafeSearch implements ShouldQueue
 {
-    use Queueable;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     /**
      * Create a new job instance.
@@ -42,7 +42,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $safe = $response->getSafeSearchAnnotation();
 
         $adult = $safe->getAdult();
-        $medical = $safe->getMaedical();
+        $medical = $safe->getMedical();
         $spoof = $safe->getSpoof();
         $violence = $safe->getViolence();
         $racy = $safe->getRacy();

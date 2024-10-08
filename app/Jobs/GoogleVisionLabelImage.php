@@ -18,8 +18,6 @@ class GoogleVisionLabelImage implements ShouldQueue
     * Create a new job instance.
     */
     private $article_image_id;
-    
-    
     public function __construct($article_image_id)
     {
         //

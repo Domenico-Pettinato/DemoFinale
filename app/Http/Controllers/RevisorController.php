@@ -11,6 +11,7 @@ class RevisorController extends Controller
     public function index()
     {
         $article_to_check = Article::with('images')->where('is_accepted', null)->orderBy('created_at', 'desc')->first();
+        // dd($article_to_check);
         return view('revisor.index', compact('article_to_check'));
     }
 
@@ -20,25 +21,20 @@ class RevisorController extends Controller
         session()->flash('revMessage', 'Articolo accettato con successo!');
         return redirect()->back()->with("L'annuncio $article->title è stato accettato");
         
-    {
+     }
     // Validazione del link di YouTube
-    $request->validate([
-        'youtube_link' => 'nullable|url'
-    ]);
+//     $request->validate([
+//         'youtube_link' => 'nullable|url'
+//     ]);
 
-    // Imposta il link di YouTube
-    $article->youtube_link = $request->youtube_link;
-    $article->setAccepted(true);
-    $article->save();
+//     // Imposta il link di YouTube
+//     $article->youtube_link = $request->youtube_link;
+//     $article->setAccepted(true);
+//     $article->save();
 
-    session()->flash('revMessage', 'Articolo accettato con successo!');
-    return redirect()->back()->with("L'annuncio $article->title è stato accettato");
-}
-
-    
-    }
-
-    
+//     session()->flash('revMessage', 'Articolo accettato con successo!');
+//     return redirect()->back()->with("L'annuncio $article->title è stato accettato");
+// }
 
     public function reject(Article $article)
     {

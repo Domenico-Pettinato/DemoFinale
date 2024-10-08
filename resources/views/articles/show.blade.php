@@ -31,17 +31,18 @@
                         </button>
                         @endif
                     </div>
-                    <!-- Sezione video -->
+                    
+                    <!-- Sezione video
                     <div class="container">
                         <div class="d-flex justify-content-center p-3">
                             <iframe src="https://www.youtube.com/embed/XhP3Xh4LMA8" title="YouTube video" allowfullscreen></iframe>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Sezione acquisto articolo -->
                     <div class="d-flex justify-content-between align-items-center p-3 border rounded bg-light mb-3">
                         <h5 class="mb-0">Acquista Articolo</h5>
                         <span class="text-success fw-bold">€{{$article->price}}</span>
-                        <button type="button" class="btn btn-primary">Acquista</button>
+                        <button type="button" class="btn btn-primary btn-sm">Acquista</button>
                     </div>
                 </div>
             </div>
@@ -54,7 +55,7 @@
                     <p class="h5">{{$article->description}}</p>
                 </div>
 
-                <div class="custom-margin-2">
+                <div class="custom-margin-2 card wrapper">
                     <p class="h5 showElementCustom">Categoria: {{$article->category->name}}</p>
                     <p class="h5 showElementCustom">Annuncio creato il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
                     <p class="h5 showElementCustom">Prezzo: €{{$article->price}}</p>
