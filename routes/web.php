@@ -7,6 +7,15 @@ use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\WorkWithUsController;
 use Illuminate\Support\Facades\Route;
 
+
+
+
+use App\Http\Controllers\GoogleLoginController;
+
+
+
+
+
 // resource controller in cui è stata esclusa la rotta 'index', che viene gestita separatamente, ma sempre all'interno del controller ArticleController
 Route::resource('articles', ArticleController::class)->except('index');
 Route::get('/', [ArticleController::class, 'index'])->name('article.index');
@@ -31,3 +40,8 @@ Route::get('/search/article', [PageController::class, 'searchArticles']) ->name(
 
 //rotta per la lingua
 Route::post('/lingua/{lang})', [PageController::class, 'setLanguage'])->name('setLocale');
+
+//rotta per google
+
+Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');

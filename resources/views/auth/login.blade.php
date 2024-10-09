@@ -35,7 +35,9 @@
 
                 <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
                 <p class="mt-3 mb-3 text-black"></p>
-                <a href="{{ url('/auth/google') }}">Login con Google</a>
+
+                <a href="{{ route('google.redirect') }}" class="btn btn-primary"> Login with Google </a>
+                
             </div>
 
             <!-- Messaggio di successo -->
@@ -45,19 +47,6 @@
             </div>
             @endif
         </form>
-    </div>
-{{-- ICONE CLICCABILI --}}
-    <div class="d-flex justify-content-center mt-3">
-        <a href="/change-language/en" class="mx-2">
-            <img src="{{ asset('images/en-flag.png') }}" alt="English" width="30" height="20">
-        </a>
-        <a href="/change-language/it" class="mx-2">
-            <img src="{{ asset('images/it-flag.png') }}" alt="Italian" width="30" height="20">
-        </a>
-        <a href="/change-language/fr" class="mx-2">
-            <img src="{{ asset('images/fr-flag.png') }}" alt="French" width="30" height="20">
-        </a>
-    </div>
 
     
 
