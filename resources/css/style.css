@@ -24,7 +24,7 @@ html, body {
     background-size: cover;
     /* background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));
     background-attachment: fixed; */
-    filter: blur(2px) brightness(0.9); /* Aggiunto filtro */
+    
 
 }
 /* logo */
@@ -78,11 +78,11 @@ html, body {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     /* end glass */
-    transition: transform 0.3s ease-in-out; /* Effetto transizione */
+   
 }
 
-.sidebarCustom:hover {
-    transform: scale(1.02); /* Effetto di espansione al hover */
+/* .sidebarCustom:hover {
+    transform: scale(1.02); Effetto di espansione al hover */
 
 .sideItemCustom{
     display: block;
