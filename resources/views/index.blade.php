@@ -1,8 +1,10 @@
-<x-layout>
+<div class="bodyBackgroundindex v-100">
+    <x-layout>
+    
     {{-- normale --}}
     {{-- <x-sidebar/>
-    <div class="container">
-        <div class="row">
+    <div class="container ">
+        <div class="row ">
             @foreach ($articles as $article)
                 <x-card :article="$article"/> 
             @endforeach
@@ -24,5 +26,6 @@
             @endforeach --}}
         </div>    
     </div>
-    <x-footer/>
+    <!-- <x-footer/> -->
 </x-layout>
+</div>
