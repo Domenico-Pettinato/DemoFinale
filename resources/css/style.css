@@ -41,7 +41,7 @@ html, body {
 /* navbar */
 .navbarCustom{
     margin-left: auto;
-    width: 70vw;
+    width: 100vw;
     z-index: 99;
     /* glass background */
     backdrop-filter: blur(2px) saturate(100%);

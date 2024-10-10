@@ -17,7 +17,7 @@
                     <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('articles.shop')}}">Negozio</a>
+                    <a class="nav-link" href="{{route('articles.shop')}}">{{__('ui.shop')}}</a>
                 </li>
                 @auth
                 <li class="nav-item">
@@ -58,7 +58,7 @@
                             <p class="text-center">{{__('ui.ciao')}} {{Auth::user()->name}}</p>
                         </li>
                         <hr>
-                        <li><a class="dropdown-item" href="{{route('personalArea')}}">Area personale</a></li>
+                        <li><a class="dropdown-item" href="{{route('personalArea')}}">{{__('ui.Privatearea')}}</a></li>
                         @if (Auth::user()->is_revisor)
                         <li><a class="dropdown-item" href="{{route('revisor.index')}}">{{__('ui.Privatearea')}}</a></li>
                         @endif

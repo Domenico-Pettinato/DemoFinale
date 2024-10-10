@@ -59,7 +59,7 @@
                 </div>
             </div>
         @endif
-        <button type="submit" class="btn btn-primary">Carica annuncio</button> 
+        <button type="submit" class="btn btn-primary">{{__('ui.Createarticle')}}</button> 
     </form>
     <x-footer/>
 </div>

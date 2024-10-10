@@ -40,7 +40,7 @@
                     </div> -->
                     <!-- Sezione acquisto articolo -->
                     <div class="d-flex justify-content-between align-items-center p-3 border rounded bg-light mb-3">
-                        <h5 class="mb-0">Acquista Articolo</h5>
+                        <h5 class="mb-0">{{__('ui.buy')}}</h5>
                         <span class="text-success fw-bold">€{{$article->price}}</span>
                         <button type="button" class="btn btn-primary btn-sm">Buy</button>
                     </div>
@@ -56,9 +56,9 @@
                 </div>
 
                 <div class="custom-margin-2">
-                    <p class="h5 showElementCustom">Categoria: {{$article->category->name}}</p>
-                    <p class="h5 showElementCustom">Annuncio creato il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
-                    <p class="h5 showElementCustom">Prezzo: €{{$article->price}}</p>
+                    <p class="h5 showElementCustom">{{__('ui.Categories')}}: {{$article->category->name}}</p>
+                    <p class="h5 showElementCustom">{{__('ui.adcreatedon')}}{{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
+                    <p class="h5 showElementCustom">{{__('ui.Price')}}: €{{$article->price}}</p>
                 </div>
             </div>
 

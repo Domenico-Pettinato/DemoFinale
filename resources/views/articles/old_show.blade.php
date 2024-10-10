@@ -56,9 +56,9 @@
         @endif -->
         
     </div>
-        <h5 class="showElementCustom">Categoria: {{$article->category->name}}</h5>
-        <h5 class="showElementCustom">Prezzo: €{{$article->price}}</h5>
-        <h6 class="showElementCustom">Annuncio di: {{$article->user->name}}</h6>
+        <h5 class="showElementCustom">{{__('ui.Categories')}}: {{$article->category->name}}</h5>
+        <h5 class="showElementCustom">{{__('ui.Price')}}: €{{$article->price}}</h5>
+        <h6 class="showElementCustom">{{__('ui.adcreatedon')}}: {{$article->user->name}}</h6>
     </div>
     <div class="container mt-3 mb-3">
         <a href="{{ route('article.index', ['article' => $article]) }}">
