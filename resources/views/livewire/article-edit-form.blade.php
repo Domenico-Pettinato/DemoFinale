@@ -4,7 +4,7 @@
             {{session('success')}}
         </div>
     @endif
-    <form wire:submit="store">
+    <form wire:submit="update">
         <div class="mb-3">
             <label for="createArticleTitle" class="form-label">{{__('ui.Title')}}</label>
             <input type="text" class="form-control" id="createArticleTitle" aria-describedby="emailHelp" wire:model.blur="title">
@@ -35,7 +35,7 @@
                 <p class="text-danger fst-italic">{{$message}}</p>
             @enderror
         </div>
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="formFileMultiple" class="form-label">Carica le tue immagini</label>
             <input class="form-control" type="file" id="formFileMultiple" multiple wire:model.live="temporary_images">
         </div>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-        @endif
-        <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">Carica annuncio</button> 
+        @endif --}}
+        <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">Modifica annuncio</button> 
     </form>
 </div>

@@ -91,8 +91,12 @@ class CreateArticle extends Component
             'description' => $this->description,
             'category_id' => $this->category_id,
             'user_id' => Auth::user()->id
-            
         ]);
+
+        if($article->user->is_revisor){
+            $article->is_accepted = true;
+            $article->save();
+        }
 
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {
