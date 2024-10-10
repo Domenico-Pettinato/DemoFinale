@@ -23,11 +23,13 @@ html, body {
     background: url(/public/images/BackgroundOceanGames.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));
-    background-attachment: fixed; */
-    
-
 }
+.bodyBackground{
+    background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));
+    background-attachment: fixed; 
+}
+
+
 /* logo */
 .logo {
     border-radius: 50px;
