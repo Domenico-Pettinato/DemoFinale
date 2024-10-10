@@ -8,6 +8,15 @@ use App\Http\Controllers\WorkWithUsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrailerController;
 
+
+
+
+use App\Http\Controllers\GoogleLoginController;
+
+
+
+
+
 // resource controller in cui è stata esclusa la rotta 'index', che viene gestita separatamente, ma sempre all'interno del controller ArticleController
 Route::resource('articles', ArticleController::class)->except('index');
 Route::get('/', [ArticleController::class, 'index'])->name('article.index');
@@ -33,5 +42,7 @@ Route::get('/search/article', [PageController::class, 'searchArticles']) ->name(
 //rotta per la lingua
 Route::post('/lingua/{lang})', [PageController::class, 'setLanguage'])->name('setLocale');
 
-// Route per aggiornare il link YouTube
-Route::post('/accept/{article}', [TrailerController::class, 'store'])->name('trailer.store');
+//rotta per google
+
+Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
