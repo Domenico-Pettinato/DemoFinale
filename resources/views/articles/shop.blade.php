@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container">
+    <div class="container ">
         <div class="row">
             @foreach ($articles as $article)
                 <x-card :article="$article"/>
