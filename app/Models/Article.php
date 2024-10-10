@@ -10,7 +10,7 @@ class Article extends Model
 {
     use Searchable;
     use HasFactory;
-    protected $fillable = ['title', 'price', 'description', 'category_id', 'user_id'];
+    protected $fillable = ['title', 'price', 'description', 'category_id', 'user_id', 'youtube_limk'];
 
     // relationships
     public function category(){

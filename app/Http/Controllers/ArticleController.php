@@ -49,7 +49,12 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
         return view('articles.show', compact('article'));
+        
+        $game = Article::findOrFail($id);
+         return view('articles.show', compact('game'));
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -62,10 +67,13 @@ class ArticleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
+
+
+    function getYoutubeId($url) {
+        parse_str(parse_url($url, PHP_URL_QUERY), $query);
+        return isset($query['v']) ? $query['v'] : null;
     }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -75,3 +83,24 @@ class ArticleController extends Controller
         //
     }
 }
+
+// class YoutubeController extends Controller
+// {
+//     public function update(Request $request, $id)
+//     {
+//         // Validazione del link YouTube
+//         $request->validate([
+//             'youtube_link' => 'nullable|url',
+//         ]);
+
+//         $article = Article::findOrFail($id);
+//         $youtubeEmbedUrl = getYoutubeEmbedUrl($request->input('youtube_link'));
+
+//         // Aggiornamento dell'articolo con il link YouTube incorporato
+//         $article->update([
+//             'youtube_link' => $youtubeEmbedUrl,
+//         ]);
+
+//         return redirect()->back()->with('success', 'Link del trailer salvato correttamente');
+//     }
+// }

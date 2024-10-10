@@ -177,8 +177,8 @@ html, body {
 }
 
 
-.custom-margin-2 {
-    text-align: right; 
+.custom-margin {
+    text-align: center; 
 }
 
 /* carousel */
@@ -254,5 +254,26 @@ html, body {
     max-width: 1000px; 
     margin: auto;
     animation: fadeIn 0.5s ease-in-out; /* Animazione per l'ingresso */
+}
+
+
+.custom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; /* Imposta l'altezza minima in modo che riempia la finestra */
+}
+
+.top-container {
+    flex-shrink: 0; /* Il contenitore superiore non si riduce */
+}
+
+.bottom-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    margin-bottom: 15vh; 
+    padding-bottom: 20px;
 }
 
