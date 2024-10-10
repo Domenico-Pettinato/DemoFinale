@@ -50,8 +50,16 @@ return
         'Name'=>'Nome',
         'Password'=>'Ripeti Password',
         'Password'=>'Password',
-        
-
+        'upload'=>'Carica la tua immagine',
+        'delete'=>'Elimina',
+        'articleof'=>'Articolo di',
+        'adcreatedon'=>'Annuncio creato il',
+        'buy'=>'Acquista Articolo',
+        'shop'=>'Negozio',
+        'ciao'=>'Ciao',
+        'google'=>'Accedi con Google',
+        'signin'=>'Accedi',
+        'remember'=>'Ricordati di me',
         
         
 

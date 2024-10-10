@@ -17,7 +17,7 @@
                     <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('articles.shop')}}">Negozio</a>
+                    <a class="nav-link" href="#">Negozio</a>
                 </li>
                 @auth
                 <li class="nav-item">
@@ -55,7 +55,7 @@
                     </a>
                     <ul class="dropdown-menu dropdownCustom">
                         <li>
-                            <p class="text-center">Ciao {{Auth::user()->name}}</p>
+                            <p class="text-center">{{__('ui.ciao')}} {{Auth::user()->name}}</p>
                         </li>
                         <hr>
                         <li><a class="dropdown-item" href="{{route('personalArea')}}">Area personale</a></li>

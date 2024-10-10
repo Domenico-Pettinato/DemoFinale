@@ -31,26 +31,33 @@
                         </button>
                         @endif
                     </div>
-
-                    <div class="d-flex justify-content-between align-items-center p-3 border rounded bg-light mb-1">
+                    
+                    <!-- Sezione video
+                    <div class="container">
+                        <div class="d-flex justify-content-center p-3">
+                            <iframe src="https://www.youtube.com/embed/XhP3Xh4LMA8" title="YouTube video" allowfullscreen></iframe>
+                        </div>
+                    </div> -->
+                    <!-- Sezione acquisto articolo -->
+                    <div class="d-flex justify-content-between align-items-center p-3 border rounded bg-light mb-3">
                         <h5 class="mb-0">Acquista Articolo</h5>
                         <span class="text-success fw-bold">€{{$article->price}}</span>
-                        <button type="button" class="btn btn-primary btn-sm">Acquista</button>
+                        <button type="button" class="btn btn-primary btn-sm">Buy</button>
                     </div>
                     @endif
                 </div>
             </div>
 
             <!-- Colonna di destra con descrizione categoria data e prezzo -->
-            <div class="col-md-6 col-12 mb-5 d-flex flex-column">
-                <div class="custom-margin mt-3">
+            <div class="col-md-6 col-12 mb-4">
+                <div class="custom-margin">
                     <h3>Descrizione:</h3>
                     <p class="h5">{{$article->description}}</p>
                 </div>
 
-                <div class="mt-auto">
+                <div class="custom-margin-2">
                     <p class="h5 showElementCustom">Categoria: {{$article->category->name}}</p>
-                    <p class="h5 showElementCustom">Annuncio del {{$article->created_at->format('d/m/Y')}} di {{$article->user->name}}</p>
+                    <p class="h5 showElementCustom">Annuncio creato il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
                     <p class="h5 showElementCustom">Prezzo: €{{$article->price}}</p>
                 </div>
             </div>
