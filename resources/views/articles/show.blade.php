@@ -49,7 +49,12 @@
 
             @else
                 <img src="https://placehold.co/600x400" alt="">
+<<<<<<< HEAD
             @endif
+=======
+            @endif --}}
+            
+>>>>>>> 6a8bc5ab0335c75cbe7f5735ccc78821a213d37d
         </div>
         <h5 class="showElementCustom">Categoria: {{$article->category->name}}</h5>
         <h5 class="showElementCustom">Prezzo: €{{$article->price}}</h5>

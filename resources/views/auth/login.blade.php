@@ -35,6 +35,9 @@
 
                 <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
                 <p class="mt-3 mb-3 text-black"></p>
+
+                <a href="{{ route('google.redirect') }}" class="btn btn-primary"> Login with Google </a>
+                
             </div>
 
             <!-- Messaggio di successo -->
@@ -44,15 +47,7 @@
             </div>
             @endif
         </form>
-    </div>
-    {{-- 
-    <div class="d-flex justify-content-center mt-3">
-        <a href="{{ route('login.facebook') }}" class="btn btn-primary mx-2">
-            <i class="fab fa-facebook"></i> Login con Facebook
-        </a>
-        <a href="{{ route('login.instagram') }}" class="btn btn-danger mx-2">
-            <i class="fab fa-instagram"></i> Login con Instagram
-        </a>
-    </div>
-    --}}
+
+    
+
 </x-layout>
