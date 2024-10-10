@@ -24,6 +24,8 @@ html, body {
     background-size: cover;
     /* background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));
     background-attachment: fixed; */
+    filter: blur(2px) brightness(0.9); /* Aggiunto filtro */
+
 }
 /* logo */
 .logo {
@@ -49,7 +51,12 @@ html, body {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     /* end glass */
+
+    backdrop-filter: blur(5px) saturate(150%); /* Intensificato effetto glassmorphism */
 }
+.navbarCustom:hover {
+    background-color: rgba(255, 255, 255, 0.3); }/* Effetto hover */
+
 .dropdownCustom{
     background: linear-gradient(var(--secondaryColor1), var(--primaryColor2), var(--primaryColor1));
     border: 1px solid var(--backgroundColor1);
@@ -72,7 +79,11 @@ html, body {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     /* end glass */
+    transition: transform 0.3s ease-in-out; /* Effetto transizione */
 }
+
+.sidebarCustom:hover {
+    transform: scale(1.02); /* Effetto di espansione al hover */
 
 .sideItemCustom{
     display: block;
@@ -225,6 +236,7 @@ html, body {
     border: 2px solid var(--secondaryColor2);
     margin-bottom: 20px; /*  margine tra gli input */
     background: rgba(255, 255, 255, 0.8); /* Sfondo chiaro e traslucido per gli input */
+    font-size: 1.1rem; /* Dimensione testo migliorata */
 }
 .form-control:focus {
     border-color: var(--primaryColor1);

@@ -43,18 +43,18 @@
             {{-- Carousel --}}
 
 
-            <h5 class="showElementCustom">Categoria: {{$article->category->name}}</h5>
-            <h5 class="showElementCustom">Prezzo: €{{$article->price}}</h5>
-            <h6 class="showElementCustom">Annuncio di: {{$article->user->name}}</h6>
+            <h5 class="showElementCustom">{{__('ui.Categories')}}: {{$article->category->name}}</h5>
+            <h5 class="showElementCustom">{{__('ui.Price')}}: €{{$article->price}}</h5>
+            <h6 class="showElementCustom">{{__('ui.Advertisementby')}}: {{$article->user->name}}</h6>
 
             {{-- @else
                 <img src="https://placehold.co/600x400" alt="">
             @endif --}}
             
         </div>
-        <h5 class="showElementCustom">Categoria: {{$article->category->name}}</h5>
-        <h5 class="showElementCustom">Prezzo: €{{$article->price}}</h5>
-        <h6 class="showElementCustom">Annuncio di: {{$article->user->name}}</h6>
+        <h5 class="showElementCustom">{{__('ui.Categories')}}: {{$article->category->name}}</h5>
+        <h5 class="showElementCustom">{{__('ui.Price')}}: €{{$article->price}}</h5>
+        <h6 class="showElementCustom">{{__('ui.Advertisementby')}}: {{$article->user->name}}</h6>
     </div>
     <div class="container mt-3 mb-3">
         <a href="{{ route('article.index', ['article' => $article]) }}">
@@ -106,9 +106,9 @@
                     </div> -->
                     <!-- Sezione acquisto articolo -->
                     <div class="d-flex justify-content-between align-items-center p-3 border rounded bg-light mb-3">
-                        <h5 class="mb-0">Acquista Articolo</h5>
+                        <h5 class="mb-0">{{__('ui.buy')}}</h5>
                         <span class="text-success fw-bold">€{{$article->price}}</span>
-                        <button type="button" class="btn btn-primary btn-sm">Acquista</button>
+                        <button type="button" class="btn btn-primary btn-sm">Buy</button>
                     </div>
                 </div>
             </div>
@@ -117,14 +117,14 @@
             <!-- Colonna di destra con descrizione categoria data e prezzo -->
             <div class="col-md-6 col-12 mb-4">
                 <div class="custom-margin">
-                    <h3>Descrizione:</h3>
+                    <h3>{{__('ui.Description')}}:</h3>
                     <p class="h5">{{$article->description}}</p>
                 </div>
 
                 <div class="custom-margin-2">
-                    <p class="h5 showElementCustom">Categoria: {{$article->category->name}}</p>
-                    <p class="h5 showElementCustom">Annuncio creato il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
-                    <p class="h5 showElementCustom">Prezzo: €{{$article->price}}</p>
+                    <p class="h5 showElementCustom">{{__('ui.Category')}}: {{$article->category->name}}</p>
+                    <p class="h5 showElementCustom">{{__('ui.adcreatedon')}} {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
+                    <p class="h5 showElementCustom">{{__('ui.Price')}}: €{{$article->price}}</p>
                 </div>
             </div>
 
