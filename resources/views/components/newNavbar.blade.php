@@ -17,7 +17,7 @@
                     <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Negozio</a>
+                    <a class="nav-link" href="{{route('articles.shop')}}">Negozio</a>
                 </li>
                 @auth
                 <li class="nav-item">
