@@ -5,9 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
+    // function shop
+    public function shop(){
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        return view('articles.shop', compact('articles'));
+    }
+    // function personalArea
+    public function personalArea(){
+        $user = Auth::user();
+        $articles = $user->articles;
+        return view('personalArea', compact('user', 'articles'));
+    }
+
     // function filtra per categoria
     public function filterByCategory($categoryId)
     {
@@ -47,6 +60,4 @@ class PageController extends Controller
             session()->put('locale', $lang);
             return redirect()->back();
         }
-
-
 }

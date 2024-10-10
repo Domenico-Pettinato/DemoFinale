@@ -21,9 +21,15 @@ use App\Http\Controllers\GoogleLoginController;
 Route::resource('articles', ArticleController::class)->except('index');
 Route::get('/', [ArticleController::class, 'index'])->name('article.index');
 
+// rotta vista shop
+Route::get('/shop', [PageController::class, 'shop'])->name('articles.shop');
+
+// rotta vista area personale
+Route::get('/personal-area', [PageController::class, 'personalArea'])->name('personalArea');
+
 // routes categories filter
 Route::get('/articles/category/{category}', [PageController::class, 'filterByCategory'])->name('articles.filterByCategory');
-Route::get('/articles/category/{category}', [PageController::class, 'filterByCategory'])->name('articles.filterByCategory');
+// Route::get('/articles/category/{category}', [PageController::class, 'filterByCategory'])->name('articles.filterByCategory');
 
 
 // routes work with us + mailtrap
@@ -35,6 +41,7 @@ Route::post('/register', [RegisterController::class, 'submitapplication'])->name
 Route::get('/reserved/index', [RevisorController::class, 'index'])->name('revisor.index');
 Route::patch('accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('reject/{article}', [RevisorController::class, 'reject'])->name('reject');
+Route::patch('cancel', [RevisorController::class, 'cancel'])->name('cancel');
 
 //rotta per effettuare la ricerca 
 Route::get('/search/article', [PageController::class, 'searchArticles']) ->name('article.search');

@@ -2,9 +2,15 @@
     <div class="container pageWrapper vh-100 pt-5">
         <h1 class="text-center">{{__('ui.revision')}}</h1>
         @if (session()->has('revMessage'))
-        <div class="alert alert-secondary">
-            {{session('revMessage')}}
-        </div>
+            <div class="alert alert-secondary d-flex justify-content-between align-items-center">
+                <p>L'azione è andata a buon fine.</p>
+                <form action="{{route('cancel')}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <input type="hidden" name="id" value="{{session('revMessage')}}" id="">
+                    <button type="submit" class="btn btn-secondary ms-auto">Annulla</button>
+                </form>
+            </div>
         @endif
         <div class="row justify-content-center">
             @if ($article_to_check)

@@ -35,7 +35,7 @@ class Article extends Model
         ];
     }
 
-    public function setAccepted($value){
+    public function setAccepted($value = null){
         $this->is_accepted = $value;
         $this->save();
     }
