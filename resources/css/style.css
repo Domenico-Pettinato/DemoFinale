@@ -37,13 +37,9 @@ html, body {
 
 /* navbar */
 .navbarCustom{
-    /* display: block; */
-    /* position: fixed;   
-    right: 0px;
-    top: 0px;
-    z-index: 99; */
     margin-left: auto;
     width: 70vw;
+    z-index: 99;
     /* glass background */
     backdrop-filter: blur(2px) saturate(100%);
     -webkit-backdrop-filter: blur(2px) saturate(100%);
@@ -64,6 +60,9 @@ html, body {
 .btnDropdownCustom{
     margin: 5px;
     width: 90%;
+}
+.btnSearchCustom{
+    height: fit-content;
 }
 
 /* sidebar */
@@ -180,6 +179,10 @@ html, body {
 }
 .btnShowCustom{
     margin-left: 8px;
+}
+.cardAnchorDecoration{
+    text-decoration: none;
+    color: var(--fontColor1);
 }
 
 /* show view */

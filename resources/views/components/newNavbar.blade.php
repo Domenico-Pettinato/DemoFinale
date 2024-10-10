@@ -5,7 +5,7 @@
                 <form class="d-flex me-auto" role="search" action="{{ route('article.search') }}" method="GET">
                     <div class="input-group">
                         <input type="search" name="query" class="form-control" placeholder="Cerca nel sito" aria - label="search">
-                        <button type="submit" class="input-group-text btn btn-outline-primary" id="basic-addon2">
+                        <button type="submit" class="input-group-text btnSearchCustom btn btn-outline-primary" id="basic-addon2">
                             <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20" aria-hidden="true">
                                 <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
@@ -17,7 +17,7 @@
                     <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{__('ui.shop')}}</a>
+                    <a class="nav-link" href="#">Negozio</a>
                 </li>
                 @auth
                 <li class="nav-item">
@@ -58,15 +58,18 @@
                             <p class="text-center">{{__('ui.ciao')}} {{Auth::user()->name}}</p>
                         </li>
                         <hr>
+                        <li><a class="dropdown-item" href="{{route('personalArea')}}">Area personale</a></li>
                         @if (Auth::user()->is_revisor)
                         <li><a class="dropdown-item" href="{{route('revisor.index')}}">{{__('ui.Privatearea')}}</a></li>
                         @endif
                         <li><a class="dropdown-item text-center" href="{{route('articles.create')}}">{{__('ui.Createarticle')}}</a></li>
-                        <li>
-                            <form action="{{ route('workwithus') }}" method="GET">
-                                <button type="submit" class="btn btn-outline-success btnDropdownCustom">{{__('ui.Workwithus')}}</button>
-                            </form>
-                        </li>
+                        @if (!Auth::user()->is_revisor)
+                            <li>
+                                <form action="{{ route('workwithus') }}" method="GET">
+                                    <button type="submit" class="btn btn-outline-success btnDropdownCustom">{{__('ui.Workwithus')}}</button>
+                                </form>
+                            </li>
+                        @endif
                         <li>
                             <form action="{{route('logout')}}" method="POST">
                                 @csrf

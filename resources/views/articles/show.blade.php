@@ -40,17 +40,21 @@
                     </div>
                 </div>
             </div>
-            {{-- Carousel --}}
+            Carousel
 
 
             <h5 class="showElementCustom">{{__('ui.Categories')}}: {{$article->category->name}}</h5>
             <h5 class="showElementCustom">{{__('ui.Price')}}: €{{$article->price}}</h5>
             <h6 class="showElementCustom">{{__('ui.Advertisementby')}}: {{$article->user->name}}</h6>
 
-            {{-- @else
+            @else
                 <img src="https://placehold.co/600x400" alt="">
+<<<<<<< HEAD
+            @endif
+=======
             @endif --}}
             
+>>>>>>> 6a8bc5ab0335c75cbe7f5735ccc78821a213d37d
         </div>
         <h5 class="showElementCustom">{{__('ui.Categories')}}: {{$article->category->name}}</h5>
         <h5 class="showElementCustom">{{__('ui.Price')}}: €{{$article->price}}</h5>
@@ -60,7 +64,6 @@
         <a href="{{ route('article.index', ['article' => $article]) }}">
             <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
     </div>
-
 </x-layout> --}}
 
 

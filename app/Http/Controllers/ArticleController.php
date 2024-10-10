@@ -54,9 +54,9 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Article $article)
     {
-        //
+        return view('articles.edit', compact('article')); 
     }
 
     /**
@@ -70,8 +70,9 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Article $article)
     {
-        //
+        $article->delete();
+        return redirect()->back()->with('success', 'Articolo eliminato con successo');
     }
 }
