@@ -55,7 +55,7 @@
                     <p class="h5">{{$article->description}}</p>
                 </div>
 
-                <div class="custom-margin-2">
+                <div class="custom-margin-2 mt-auto">
                     <p class="h5 showElementCustom">{{__('ui.Categories')}}: {{$article->category->name}}</p>
                     <p class="h5 showElementCustom">{{__('ui.adcreatedon')}}{{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
                     <p class="h5 showElementCustom">{{__('ui.Price')}}: €{{$article->price}}</p>
