@@ -24,10 +24,12 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.bodyBackground {
-background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));
-    background-attachment: fixed;
+.bodyBackground{
+    background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--primaryColor1), var(--primaryColor2), var(--secondaryColor1));
+    background-attachment: fixed; 
 }
+
+
 /* logo */
 .logo {
     border-radius: 50px;
@@ -39,7 +41,7 @@ background: radial-gradient(circle at bottom, var(--backgroundColor1), var(--pri
 /* navbar */
 .navbarCustom{
     margin-left: auto;
-    width: 70vw;
+    width: 100vw;
     z-index: 99;
     /* glass background */
     backdrop-filter: blur(2px) saturate(100%);

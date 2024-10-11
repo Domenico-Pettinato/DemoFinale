@@ -23,7 +23,7 @@
                 </div>
     
                 <!-- Nome dell'autore dell'articolo -->
-                <p class="card-text cardTextCustom mb-0">Articolo di {{ $article->user->name }}</p>
+                <p class="card-text cardTextCustom mb-0">{{__('ui.articleof')}}{{ $article->user->name }}</p>
     
                 <!-- Pulsante per mostrare l'articolo -->
                 {{-- <a href="{{ route('articles.show', ['article' => $article->id]) }}">
