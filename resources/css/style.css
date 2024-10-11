@@ -92,6 +92,7 @@ html, body {
 /* index view */
 .carouselCustom{
     margin-top: 6vh;
+    margin-bottom: 22vh;
     /* margin-left: 8vw; */
 }
 .indexCardCarouselWrapper{
