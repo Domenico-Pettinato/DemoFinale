@@ -31,7 +31,7 @@
                         </button>
                         @endif
                     </div>
-                    
+
                     <!-- Sezione video
                     <div class="container">
                         <div class="d-flex justify-content-center p-3">
@@ -49,24 +49,26 @@
             </div>
 
             <!-- Colonna di destra con descrizione categoria data e prezzo -->
-            <div class="col-md-6 col-12 mb-4">
+            <div class="col-md-6 col-12 mb-4 d-flex flex-column">
                 <div class="custom-margin">
                     <h3>Descrizione:</h3>
                     <p class="h5">{{$article->description}}</p>
                 </div>
 
-                <div class="custom-margin-2">
+                <div class="custom-margin-2 mt-auto">
                     <p class="h5 showElementCustom">Categoria: {{$article->category->name}}</p>
                     <p class="h5 showElementCustom">Annuncio creato il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
                     <p class="h5 showElementCustom">Prezzo: €{{$article->price}}</p>
                 </div>
             </div>
 
-            <div class="container mb-5">
+            <div class="container mt-3 mb-3">
                 <a href="{{ route('article.index', ['article' => $article]) }}">
                     <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
                 </a>
             </div>
+
+
         </div>
     </div>
 </x-layout>
