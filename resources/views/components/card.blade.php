@@ -1,4 +1,4 @@
-<div class="col-12 col-md-6 col-lg-4 mb-5">
+<div class="col-12 col-md-6 mb-5">
     <div class="card h-100 cardWrapper d-flex flex-row">
         <!-- Immagine -->
         <img class="card-img-left img-fluid cardImageCustom" style="width: 150px; height: auto;" src="{{$article->images->isNotEmpty() ? Storage::url($article->images->first()->getUrl(300, 300)) : 'https://picsum.photos/' . (300 + $article->id)}}" alt="Immagine di {{ $article->title }}"> 
@@ -17,7 +17,7 @@
                     <h4 class="card-text cardTextCustom">€{{ $article->price }}</h4>
     
                     <!-- Descrizione dell'articolo -->
-                    <p class="card-text cardDescriptionCustom text-truncate" style="max-height: 3.5em; overflow: hidden;">
+                    <p class="card-text cardDescriptionCustom text-truncate cardDescriptionCustom" style="max-height: 3.5em; overflow: hidden;">
                         {{ Str::limit($article->description, 100) }}
                     </p>
                 </div>

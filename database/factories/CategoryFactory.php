@@ -9,6 +9,20 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class CategoryFactory extends Factory
 {
+    public $categories = [
+        'Azione',
+        'Avventura',
+        'Giochi di ruolo (RPG)',
+        'Sparatutto',
+        'Strategia',
+        'Sportivo',
+        'Simulazione',
+        'Puzzle',
+        'Platform',
+        'Survival Horror',
+        'Corsa',
+        'MMORPG'
+    ];
     /**
      * Define the model's default state.
      *
@@ -17,7 +31,7 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'=> fake()->name()
+            'name'=> $this->faker->unique()->randomElement($this->categories)
         ];
     }
 }
