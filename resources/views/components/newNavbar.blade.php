@@ -19,6 +19,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('articles.shop')}}">{{__('ui.shop')}}</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                    </a>
+                    
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        @foreach ($categories as $category)
+                            <li><a class="dropdown-item" href="{{ route('articles.filterByCategory', ['category' => $category->id]) }}">{{$category->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </li>
                 @auth
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('articles.create')}}">{{__('ui.Createarticle')}}</a>
