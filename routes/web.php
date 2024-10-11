@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\WorkWithUsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TrailerController;
 
 
 

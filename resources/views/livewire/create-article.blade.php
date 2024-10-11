@@ -40,7 +40,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="formFileMultiple" class="form-label">Carica le tue immagini</label>
+            <label for="formFileMultiple" class="form-label">{{__('ui.upload')}}</label>
             <input class="form-control" type="file" id="formFileMultiple" multiple wire:model="temporary_images">
         </div>
 
@@ -52,14 +52,14 @@
                         @foreach ($images as $key=>$image)
                             <div class="col d-flex flex-column align-items-center my-2">
                                 <div class="imgPreviewCustom mx-auto" style="background-image: url({{$image->temporaryUrl()}})"></div>
-                                <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">Elimina</button>
+                                <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
                             </div>
                         @endforeach
                     </div>
                 </div>
             </div>
         @endif
-        <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">Carica annuncio</button> 
+        <button type="submit" class="btn btn-primary">{{__('ui.Createarticle')}}</button> 
     </form>
     <x-footer/>
 </div>

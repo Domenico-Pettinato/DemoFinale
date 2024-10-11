@@ -50,5 +50,16 @@ return
         'Password'=>'Repeat Password',
         'Pass'=>'Password',
         'Title'=>'Title',
+        'upload'=>'Upload your pictures',
+        'delete'=>'delete',
+        'articleof'=>'Article of',
+        'adcreatedon'=>'Ad create on',
+        'buy'=>'Buy Item',
+        'shop'=>'Shop',
+        'ciao'=>'Hi',
+        'google'=>'Login with Google',
+        'signin'=>'Sign in',
+        'remember'=>'Remember me',
+
         
     ];

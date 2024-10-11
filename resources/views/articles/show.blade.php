@@ -1,4 +1,3 @@
-
 <x-layout>
     <div class="container d-flex justify-content-center align-items-center fst-italic" style="min-height: 100vh;">
         <div class="row w-100">
@@ -32,7 +31,7 @@
                         </button>
                         @endif
                     </div>
-                    
+
                     <!-- Sezione video
                     <div class="container">
                         <div class="d-flex justify-content-center p-3">
@@ -41,36 +40,35 @@
                     </div> -->
                     <!-- Sezione acquisto articolo -->
                     <div class="d-flex justify-content-between align-items-center p-3 border rounded bg-light mb-3">
-                        <h5 class="mb-0">Acquista Articolo</h5>
+                        <h5 class="mb-0">{{__('ui.buy')}}</h5>
                         <span class="text-success fw-bold">€{{$article->price}}</span>
-                        <button type="button" class="btn btn-primary btn-sm">Acquista</button>
+                        <button type="button" class="btn btn-primary btn-sm">Buy</button>
                     </div>
+                    @endif
                 </div>
             </div>
-            @endif
 
             <!-- Colonna di destra con descrizione categoria data e prezzo -->
-            <div class="col-md-6 col-12 mb-4">
+            <div class="col-md-6 col-12 mb-4 d-flex flex-column">
                 <div class="custom-margin">
                     <h3>Descrizione:</h3>
                     <p class="h5">{{$article->description}}</p>
                 </div>
 
-                <div class="custom-margin-2">
-                    <p class="h5 showElementCustom">Categoria: {{$article->category->name}}</p>
-                    <p class="h5 showElementCustom">Annuncio creato il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
-                    <p class="h5 showElementCustom">Prezzo: €{{$article->price}}</p>
+                <div class="custom-margin-2 mt-auto">
+                    <p class="h5 showElementCustom">{{__('ui.Categories')}}: {{$article->category->name}}</p>
+                    <p class="h5 showElementCustom">{{__('ui.adcreatedon')}}{{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
+                    <p class="h5 showElementCustom">{{__('ui.Price')}}: €{{$article->price}}</p>
                 </div>
             </div>
 
-
-
             <div class="container mt-3 mb-3">
-                    <a href="{{ route('article.index', ['article' => $article]) }}">
-                        <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
-                        
+                <a href="{{ route('article.index', ['article' => $article]) }}">
+                    <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
+                </a>
             </div>
+
+
         </div>
     </div>
 </x-layout>
-

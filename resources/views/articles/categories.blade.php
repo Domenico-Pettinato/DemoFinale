@@ -10,9 +10,9 @@
                         <h5 class="cardTextCustom">{{$article->category->name}}</h5>
                         <h4 class="cardTextCustom">€{{$article->price}}</h4>
                         <p class="cardTextCustom cardDescriptionCustom">{{$article->description}}</p>
-                        <p class="cardTextCustom">Articolo di {{$article->user->name}}</p>
+                        <p class="cardTextCustom">{{__('ui.articleof')}} {{$article->user->name}}</p>
                         <a class="" href="{{route('articles.show', ['article'=>$article->id])}}">
-                        <button type="button" class="btn btn-secondary btnShowCustom">Mostra articolo</button></a>
+                        <button type="button" class="btn btn-secondary btnShowCustom">{{__('ui.Showarticle')}}</button></a>
                     </div>
                 </div>
             @endforeach

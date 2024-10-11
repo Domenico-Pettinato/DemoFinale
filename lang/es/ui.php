@@ -53,7 +53,16 @@ return
         'Name'=>'Nombre',
         'Password'=>'Repite contrasena',
         'Pass'=>'Contrasena',
-        
+        'upload'=>'Sube tus imàgenes',
+        'delete'=>'eliminar',
+        'articleof'=>'Articulo de',
+        'adcreatedon'=>'Anuncio creado el',
+        'buy'=>'Comprar articulo', 
+        'shop'=>'Tienda',
+        'ciao'=>'Hola',
+        'google'=>'Iniciar sesiòn con Google',
+        'signin'=>'Inicia sesion',
+        'remember'=>'Recuerdame',       
 
         
 
