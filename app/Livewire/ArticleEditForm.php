@@ -18,6 +18,7 @@ class ArticleEditForm extends Component
     public $description;
     #[Validate()]
     public $category_id;
+    public $images;
 
     // validation
     public function rules()
@@ -45,6 +46,7 @@ class ArticleEditForm extends Component
         $this->article->description = $this->description;
         $this->article->category_id = $this->category_id;
         $this->article->is_accepted = null;
+        $this->images = $this->images;
         $this->article->save();
 
         if($this->article->user->is_revisor){

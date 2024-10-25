@@ -22,7 +22,9 @@ Route::resource('articles', ArticleController::class)->except('index');
 Route::get('/', [ArticleController::class, 'index'])->name('article.index');
 
 // rotta vista shop
-Route::get('/shop', [PageController::class, 'shop'])->name('articles.shop');
+// Route::get('/shop', [PageController::class, 'shop'])->name('articles.shop');
+Route::get('/shop', [ArticleController::class, 'shop'])->name('shop');
+Route::get('/shop/{page}', [ArticleController::class, 'shop'])->name('shop.page');
 
 // rotta vista area personale
 Route::get('/personal-area', [PageController::class, 'personalArea'])->name('personalArea');
@@ -53,3 +55,4 @@ Route::post('/lingua/{lang})', [PageController::class, 'setLanguage'])->name('se
 
 Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
 Route::get('/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
+

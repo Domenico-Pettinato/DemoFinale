@@ -1,4 +1,5 @@
 <x-layout>
+    <div class="container vh-100">
     <header>
         <h1 class="h3 mb-3 fw-normal text-black">{{__('ui.Workwithus')}}</h1>
     </header>
@@ -44,4 +45,5 @@
             <button type="submit" class="btn btn-primary">{{__('ui.submit')}}</button>
         </form>
     </section>
+    </div>
 </x-layout>

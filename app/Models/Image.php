@@ -30,10 +30,12 @@ class Image extends Model
         return Storage::url($file);
     }
 
-    public function getUrl($w = null, $h = null)
+    public function getUrl($width, $height)
     {
-        return self::getUrlByFilePath($this->path, $w, $h);
+        // Aggiungi la logica per generare l'URL con le dimensioni specificate
+        return Storage::url($this->path); // Assicurati che 'path' contenga il percorso corretto
     }
+    
 
     protected function casts(): array
     {

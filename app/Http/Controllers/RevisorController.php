@@ -34,18 +34,4 @@ class RevisorController extends Controller
         $article->setAccepted(null);
         return redirect()->back();
     }
-    // Validazione del link di YouTube
-//     $request->validate([
-//         'youtube_link' => 'nullable|url'
-//     ]);
-
-//     // Imposta il link di YouTube
-//     $article->youtube_link = $request->youtube_link;
-//     $article->setAccepted(true);
-//     $article->save();
-
-//     session()->flash('revMessage', 'Articolo accettato con successo!');
-//     return redirect()->back()->with("L'annuncio $article->title è stato accettato");
-// }
-
 }

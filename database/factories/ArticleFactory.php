@@ -21,7 +21,7 @@ class ArticleFactory extends Factory
         return [
             'title' => $this->faker->name(),
             'price' => $this->faker->numberBetween(10, 999),  
-            'description' => $this->faker->sentence(10),
+            'description' => $this->faker->sentence(100),
             'category_id' => Category::inRandomOrder()->first()->id,  
             'user_id' => User::inRandomOrder()->first()->id,
             'is_accepted' => true

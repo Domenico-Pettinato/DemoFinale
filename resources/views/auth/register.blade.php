@@ -1,9 +1,9 @@
 <x-layout>
     <div class=" d-flex justify-content-center">
-        <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="100" height="100" class="rounded-circle  mb-2">
+        <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="100" height="100" class="rounded-circle mt-2">
     </div>
     <!-- validazione della registrazione -->
-    <div class="col-12 mt-3 d-flex justify-content-center vh-100">
+    <div class="col-12 mt-1 d-flex justify-content-center vh-100">
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

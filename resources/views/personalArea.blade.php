@@ -2,7 +2,7 @@
     {{-- @foreach ($articles as $article)
         <h1>{{$article->title}}</h1>
     @endforeach --}}
-    <div class="container mt-5">
+    <div class="container mt-5 vh-100">
         <div class="table-responsive">
             <table class="table table-striped table-sm p-4">
                 <thead>
@@ -38,6 +38,13 @@
                     @endforeach
                 </tbody>
             </table>
+            
         </div>
+       
     </div>
+     <div class="container mb-5">
+                <a href="{{ route('shop') }}">
+                    <button type="button" class="btn btn-outline-primary rounded-pill">Back</button>
+                </a>
+            </div>
 </x-layout>

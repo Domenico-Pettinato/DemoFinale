@@ -1,6 +1,6 @@
 <x-layout>
-    <div class=" d-flex justify-content-center">
-        <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="100" height="100" class="rounded-circle mt-2 mb-4">
+    <div class="d-flex justify-content-center">
+        <img src="{{ asset ('images\logo.jpg') }}" alt="Logo" width="100" height="100" class="rounded-circle mt-2">
     </div>
 
     <!-- validazione del login -->
@@ -12,7 +12,7 @@
     </div>
     @endif
     
-    <div class="col-12 mt-3 d-flex justify-content-center vh-100">
+    <div class="col-12 mt-1 d-flex justify-content-center vh-100">
         <form method="POST" action="{{route('login')}}" class="form">
             @csrf
             <div class="container">
@@ -32,17 +32,16 @@
                     <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
                     <label class="form-check-label text-black" for="flexCheckDefault">{{__('ui.remember')}}</label>
                 </div>
-
                 <button class="btn btn-primary w-100 py-2" type="submit">{{__('ui.signin')}}</button>
                 <p class="mt-3 mb-3 text-black"></p>
 
-                <a href="{{ route('google.redirect') }}" class="btn btn-primary"> {{__('ui.google')}} </a>
+                <a href="{{ route('google.redirect') }}" class="btn btn-primary w-100 py-2"> {{__('ui.google')}} </a>
                 
             </div>
 
             <!-- Messaggio di successo -->
             @if (session('success'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success mt-1" role="alert">
                 {{ session('success') }}
             </div>
             @endif
@@ -50,6 +49,6 @@
 
         
 
-    
+    </div>
 
 </x-layout>

@@ -31,9 +31,11 @@ class Article extends Model
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
-            'category' => $this->category
+            // Aggiunto un controllo per assicurarci che la categoria esista
+            'category' => $this->category ? $this->category->name : null
         ];
     }
+    
 
     public function setAccepted($value = null){
         $this->is_accepted = $value;
